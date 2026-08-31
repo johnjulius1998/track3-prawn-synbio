@@ -2,7 +2,7 @@
 
 ## Gut Microbiome & Host Transcriptome Drivers of Growth Rate
 
-**BioProject**: PRJNA875278 | **Version**: v5.0 (2026-08-17) | **Approach**: 2 (pooled ASV) + 3 (WGCNA) + tool-derived functional profiling & KEGG-bridged integration
+**Team**: Prawn to be Wild | **BioProject**: PRJNA875278 | **Version**: v5.0 (2026-08-17) | **Approach**: 2 (pooled ASV) + 3 (WGCNA) + tool-derived functional profiling & KEGG-bridged integration
 
 > **v5.0**: the shortlists below reflect the validation gates described in this document — 5/5 microbial taxa (all pass the Bayesian-CI + contamination gates) and 6/10 host genes (only M6 and M8 survive permutation testing).
 

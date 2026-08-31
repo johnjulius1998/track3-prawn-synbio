@@ -4,7 +4,7 @@
 
 **BioProject**: PRJNA875278 | **Version**: v5.0 (2026-08-17) | **Approach**: 2 (pooled ASV) + 3 (WGCNA) + tool-derived functional profiling & KEGG-bridged integration
 
-> **v5.0 note**: the shortlists below were rebuilt against the official `track3_shortlists_TEMPLATE.xlsx` schema and now strictly reflect the validation gates in this document — 5/5 microbial taxa (all pass the Bayesian-CI + contamination gates) and 6/10 host genes (only M6 and M8 survive permutation testing). Earlier drafts of this README and `results/shortlist/*.csv` still listed *Citrobacter koseri*/*Klebsiella variicola* and M7/M12 hub genes as "final" — those are now corrected everywhere below.
+> **v5.0**: the shortlists below reflect the validation gates described in this document — 5/5 microbial taxa (all pass the Bayesian-CI + contamination gates) and 6/10 host genes (only M6 and M8 survive permutation testing).
 
 > **This repository** is a curated, manuscript-ready subset of the full analysis project. See [Repository Structure](#repository-structure) and [Data Availability](DATA_AVAILABILITY.md) for what is and isn't included here.
 
@@ -49,9 +49,9 @@ Host "Amino sugar & nucleotide sugar metabolism" pathway
 New exoskeleton synthesis during molting → GROWTH
 ```
 
-**Why this is the strongest microbial result**: It doesn't depend on any statistical test in our data. *Pseudoalteromonas* species are canonical chitin-degrading bacteria — known since the 1990s (Holmström & Kjelleberg, 1999, *FEMS Microbiol Ecol*). Crustaceans need GlcNAc to build their exoskeletons. The genome-resolved microbial amino-sugar pathway index bridges to host amino sugar metabolism + lysosome (ranks #2–3 after the v4 edge rebuild; the top-ranked bridge is now SCFA → PPAR signaling).
+**Why this is the strongest microbial result**: It doesn't depend on any statistical test in our data. *Pseudoalteromonas* species are canonical chitin-degrading bacteria — known since the 1990s (Holmström & Kjelleberg, 1999, *FEMS Microbiol Ecol*). Crustaceans need GlcNAc to build their exoskeletons. The genome-resolved microbial amino-sugar pathway index bridges to host amino sugar metabolism + lysosome (ranks #2–3; the top-ranked bridge is SCFA → PPAR signaling).
 
-**On the host side**: NCBI annotation found **N-acetylgalactosamine kinase (GalNAc kinase)** among M6 hubs — an enzyme of amino sugar metabolism. This convergence is **single-gene-level**: formal GSEA does NOT rank amino sugar metabolism among significant M6 sets. The chitin→GlcNAc hypothesis rests on the microbial layer and literature, exactly where the Data Note's inferential limits say it must.
+**On the host side**: NCBI annotation found **N-acetylgalactosamine kinase (GalNAc kinase)** among M6 hubs — an enzyme of amino sugar metabolism. This convergence is **single-gene-level**: formal GSEA does NOT rank amino sugar metabolism among significant M6 sets. The chitin→GlcNAc hypothesis rests on the microbial layer and literature — exactly where a single pooled sample per growth group limits us to directional evidence rather than statistical inference.
 
 ---
 
@@ -128,7 +128,7 @@ Thirteen layers of internal validation were applied to avoid overinterpreting ou
 
 ## Final Ranked Candidates
 
-**These are the official submission shortlists** — see `results/shortlist/track3_shortlists.xlsx` (or the matching CSVs) for the fully annotated, template-schema version with every column the brief's rubric checks for (`statistic_attributable_to`, `n_libraries_behind_this_call`, `edge_basis`, `contaminant_risk`, etc.). Both lists are *shorter* than the brief's ceiling (10 genes, 5 taxa) where the validation gates stop passing candidates — "fewer, better-supported candidates is not penalised" (submission guide §3a).
+**These are the final ranked candidates** — see `results/shortlist/track3_shortlists.xlsx` (or the matching CSVs) for the fully annotated version, with supporting columns such as `statistic_attributable_to`, `n_libraries_behind_this_call`, `edge_basis`, and `contaminant_risk` for every candidate. Both lists are capped below their maximum size (10 genes, 5 taxa) because the validation gates stop passing candidates before that ceiling is reached — fewer, better-supported candidates were prioritized over hitting the maximum count.
 
 ### Host Genes (6 of 10 ceiling — gated by permutation-null testing, not by data availability)
 
@@ -143,7 +143,7 @@ Only modules M6 (empirical p=0.001) and M8 (p=0.014) exceed the permutation null
 | 5 | XM_067113377.1 | CtBP | M8 | 0.616 | C-terminal binding protein — metabolic-state-linked transcriptional corepressor |
 | 6 | GH624888.1 | COX1-like | M8 | 0.604 | EST similar to mitochondrial COX1 — weak lead, oxidative-metabolism signature |
 
-**Dropped from the final shortlist** (were in the earlier v3.1/v4.0 draft, kept here for transparency, not part of the official submission):
+**Dropped from the final shortlist** (kept here for transparency):
 
 | Gene | Module | Why dropped |
 |------|--------|-------------|

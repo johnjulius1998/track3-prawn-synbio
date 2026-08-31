@@ -1,0 +1,192 @@
+taxon	Jumper	Laggard	rel_abund_jumper_pct	rel_abund_laggard_pct	fold_diff	direction	exclusive_to	predicted_function	pathways	category	evidence_basis	literature_refs	contaminant_flag	contaminant_reason	contaminant_note
+Jiulongibacter sediminis	298	17	55.4935	3.3399	3.1066	Jumper-enriched	none	Anaerobic metabolism; Fermentation (putative)	Anaerobic fermentation	anaerobic_fermenter	literature-curated	Liu et al. 2016, Jiulongibacter sediminis gen. nov.	False		Sediment bacterium; environmental origin likely
+Citrobacter koseri	13	2	2.4209	0.3929	2.1146	Jumper-enriched	none	Citrate utilization; Mixed acid fermentation; Hydrogen sulfide production	Citrate cycle; Mixed acid fermentation	organic_acid_metabolism	literature-curated	Borenshtein & Schauer 2006, The Genus Citrobacter	False		
+Klebsiella variicola	34	9	6.3315	1.7682	1.5719	Jumper-enriched	none	Mixed acid fermentation; Nitrogen fixation; Siderophore production	Mixed acid fermentation; Nitrogen fixation (nif)	organic_acid_metabolism	literature-curated	Podschun & Ullmann 1998, Klebsiella spp.	False		
+Erwinia piriflorinigrans	3	1	0.5587	0.1965	1.3414	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Unknown	5	2	0.9311	0.3929	1.1591	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Cronobacter muytjensii	2	1	0.3724	0.1965	0.9359	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Marivita roseacus	2	1	0.3724	0.1965	0.9359	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Leclercia pneumoniae	4	3	0.7449	0.5894	0.5304	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Pectobacterium cacticida	17	14	3.1657	2.7505	0.4369	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Enterobacter mori	1	1	0.1862	0.1965	0.2428	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Kluyvera georgiana	2	2	0.3724	0.3929	0.2428	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Mucilaginibacter koreensis	1	1	0.1862	0.1965	0.2428	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Pluralibacter pyrinus	2	2	0.3724	0.3929	0.2428	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Rahnella aceris	1	1	0.1862	0.1965	0.2428	Jumper-enriched	none	unknown (no curated entry)		unknown	none		False		
+Agarivorans gilvus	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Alcanivorax jadensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Arcticibacterium luteifluviistationis	9	0	1.676	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Buchnera aphidicola	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Citrobacter bitternis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Citrate utilization; Mixed acid fermentation; Hydrogen sulfide production	Citrate cycle; Mixed acid fermentation	organic_acid_metabolism	literature-curated	Borenshtein & Schauer 2006, The Genus Citrobacter	False		
+Cyclobacterium qasimii	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Dyadobacter sediminis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Emticicia soli	3	0	0.5587	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Endothiovibrio diazotrophicus	15	0	2.7933	0.0		Jumper-exclusive	Jumper	Sulfur oxidation; Nitrogen fixation (putative)	Sulfur oxidation (sox); Nitrogen fixation (nif)	sulfur_metabolism	literature-curated	Bazylinski et al. 2016, Endothiovibrio diazotrophicus	False		
+Enterobacter asburiae	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Flavobacterium jumunjinense	8	0	1.4898	0.0		Jumper-exclusive	Jumper	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium phocarum	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium silvisoli	2	0	0.3724	0.0		Jumper-exclusive	Jumper	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Fluviimonas pallidilutea	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Franconibacter helveticus	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Haliea alexandrii	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Haloferula luteola	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Insectihabitans xujianqingii	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Klebsiella quasipneumoniae	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Mixed acid fermentation; Nitrogen fixation; Siderophore production	Mixed acid fermentation; Nitrogen fixation (nif)	organic_acid_metabolism	literature-curated	Podschun & Ullmann 1998, Klebsiella spp.	False		
+Klebsiella quasivariicola	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Mixed acid fermentation; Nitrogen fixation; Siderophore production	Mixed acid fermentation; Nitrogen fixation (nif)	organic_acid_metabolism	literature-curated	Podschun & Ullmann 1998, Klebsiella spp.	False		
+Kluyvera ascorbata	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Kytococcus sedentarius	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Mangrovibacter plantisponsor	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Maribius pelagius	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Mesorhizobium septentrionale	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Methylococcus capsulatus	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Methylotenera mobilis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Novispirillum itersonii	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Pantoea agglomerans	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Pantoea dispersa	3	0	0.5587	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Paracoccus salipaludis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Pectobacterium polaris	3	0	0.5587	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Pelagerythrobacter marensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Peptoniphilus faecalis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Phaeocystidibacter luteus	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Phaeodactylibacter luteus	3	0	0.5587	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Phycisphaera mikurensis	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Phytobacter diazotrophicus	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Pontibacter roseus	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Proteus faecis	3	0	0.5587	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Pseudoalteromonas arabiensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas fenneropenaei	2	0	0.3724	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas luteoviolacea	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas peptidolytica	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas phenolica	10	0	1.8622	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas telluritireducens	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas translucida	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudoalteromonas xiamenensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Extracellular enzyme secretion; Bioactive compound synthesis	Chitin degradation; Secondary metabolite biosynthesis	chitin_degrader	literature-curated	Holmström & Kjelleberg 1999, Marine Pseudoalteromonas	False		
+Pseudomonas arcuscaelestis	2	0	0.3724	0.0		Jumper-exclusive	Jumper	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas saponiphila	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Rahnella inusitata	4	0	0.7449	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Ralstonia pickettii	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		True	Genus 'ralstonia' is a known reagent/skin contaminant	
+Raoultella electrica	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Rhizorhapis suberifaciens	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Ruegeria pomeroyi	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Runella soli	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Salipiger aestuarii	2	0	0.3724	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Serratia ficaria	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Serratia ureilytica	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Shewanella litorisediminis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Shewanella maritima	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Siccibacter turicensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Sphingomonas koreensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		True	Genus 'sphingomonas' is a known reagent/skin contaminant	
+Stutzerimonas kunmingensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Thalassotalea marina	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Thiohalospira halophila	6	0	1.1173	0.0		Jumper-exclusive	Jumper	Sulfur oxidation; Halophilic metabolism	Sulfur oxidation (sox)	sulfur_metabolism	literature-curated	Sorokin et al. 2008, Thiohalospira	False		
+Thiomicrorhabdus heinhorstiae	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Trabulsiella guamensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Vibrio cholerae	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Chitinase secretion; Protease secretion	Chitin degradation to GlcNAc; Amino sugar metabolism	chitin_degrader	literature-curated	Meibom et al. 2004, Vibrio chitin utilization	False		
+Vibrio litoralis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Chitinase secretion; Protease secretion	Chitin degradation to GlcNAc; Amino sugar metabolism	chitin_degrader	literature-curated	Meibom et al. 2004, Vibrio chitin utilization	False		
+Vibrio pelagius	1	0	0.1862	0.0		Jumper-exclusive	Jumper	Chitin degradation; Chitinase secretion; Protease secretion	Chitin degradation to GlcNAc; Amino sugar metabolism	chitin_degrader	literature-curated	Meibom et al. 2004, Vibrio chitin utilization	False		
+Yersinia rochesterensis	1	0	0.1862	0.0		Jumper-exclusive	Jumper	unknown (no curated entry)		unknown	none		False		
+Moraxella osloensis	1	35	0.1862	6.8762	-3.3126	Laggard-enriched	none	unknown (no curated entry)		unknown	none		False		
+Exiguobacterium aestuarii	1	20	0.1862	3.9293	-2.753	Laggard-enriched	none	unknown (no curated entry)		unknown	none		False		
+Flavobacterium haoranii	3	12	0.5587	2.3576	-1.1435	Laggard-enriched	none	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Mariniblastus fucicola	3	12	0.5587	2.3576	-1.1435	Laggard-enriched	none	unknown (no curated entry)		unknown	none		False		
+Providencia stuartii	1	3	0.1862	0.5894	-0.8558	Laggard-enriched	none	unknown (no curated entry)		unknown	none		False		
+Pseudomonas alcaligenes	2	5	0.3724	0.9823	-0.6735	Laggard-enriched	none	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas tianjinensis	1	2	0.1862	0.3929	-0.4504	Laggard-enriched	none	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Acinetobacter chinensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		True	Genus 'acinetobacter' is a known reagent/skin contaminant	
+Acinetobacter indicus	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		True	Genus 'acinetobacter' is a known reagent/skin contaminant	
+Aeromonas dhakensis	0	9	0.0	1.7682		Laggard-exclusive	Laggard	Chitin degradation; Chitinase production; Amylase secretion	Chitin degradation; Starch and sucrose metabolism	chitin_degrader	literature-curated	Janda & Abbott 2010, The Genus Aeromonas	False		
+Aeromonas lusitana	0	6	0.0	1.1788		Laggard-exclusive	Laggard	Chitin degradation; Chitinase production; Amylase secretion	Chitin degradation; Starch and sucrose metabolism	chitin_degrader	literature-curated	Janda & Abbott 2010, The Genus Aeromonas	False		
+Anatilimnocola aggregata	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Azomonas agilis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Azotobacter nigricans	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Nitrogen fixation (aerobic); PHA accumulation	Nitrogen fixation (nif); PHA biosynthesis	nitrogen_metabolism	literature-curated	Jiménez et al. 2019, Azotobacter as PGPR	False		
+Brachybacterium aquaticum	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Brenneria rubrifaciens	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Brevundimonas aurantiaca	0	5	0.0	0.9823		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Brevundimonas kwangchunensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Citrobacter freundii	0	4	0.0	0.7859		Laggard-exclusive	Laggard	Citrate utilization; Mixed acid fermentation; Hydrogen sulfide production	Citrate cycle; Mixed acid fermentation	organic_acid_metabolism	literature-curated	Borenshtein & Schauer 2006, The Genus Citrobacter	False		
+Cupriavidus necator	0	7	0.0	1.3752		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Cupriavidus plantarum	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Cupriavidus yeoncheonensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Cutibacterium acnes	0	91	0.0	17.8782		Laggard-exclusive	Laggard	Lipid metabolism; Propionate fermentation	Propionate fermentation; Lipase activity	lipid_metabolism	literature-curated	Brüggemann et al. 2021, Cutibacterium acnes in skin	False		Skin commensal; likely contaminant in gut samples
+Cutibacterium namnetense	0	9	0.0	1.7682		Laggard-exclusive	Laggard	Lipid metabolism; Propionate fermentation	Propionate fermentation; Lipase activity	lipid_metabolism	literature-curated	Brüggemann et al. 2021, Cutibacterium acnes in skin	False		Skin commensal; likely contaminant in gut samples
+Enterobacter cloacae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Entomohabitans teleogrylli	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Entomomonas moraniae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Exiguobacterium alkaliphilum	0	3	0.0	0.5894		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Exiguobacterium marinum	0	3	0.0	0.5894		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Exiguobacterium undae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Flavobacterium caeni	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium dongtanense	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium enshiense	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium luticocti	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium palustre	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Flavobacterium xanthum	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Vitamin B12 synthesis (some spp.); Organic matter degradation	Cobalamin biosynthesis; Extracellular enzyme secretion	vitamin_synthesis	literature-curated	McBride 2014, The Family Flavobacteriaceae	True	Genus 'flavobacterium' is a known reagent/skin contaminant	
+Gemmata massiliana	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Halopseudomonas pelagia	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Hansschlegelia beijingensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Janibacter endophyticus	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Kosakonia arachidis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Lewinella cohaerens	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Limnoglobus roseus	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Luminiphilus syltensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Luteimonas abyssi	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Lysobacter brunescens	0	5	0.0	0.9823		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia agri	0	4	0.0	0.7859		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia alkalitolerans	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia arenae	0	11	0.0	2.1611		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia arvi	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia haematophila	0	3	0.0	0.5894		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia niastensis	0	6	0.0	1.1788		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia norwichensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia pinisoli	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia rhizosphaerae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia terrae	0	8	0.0	1.5717		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Massilia yuzhufengensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Methylovulum psychrotolerans	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Moraxella atlantae	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Moraxella lacunata	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Moritella profunda	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Pantoea alhagi	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Paraburkholderia pallida	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Pseudomonas aeruginosa	0	8	0.0	1.5717		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas alkylphenolica	0	13	0.0	2.554		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas alloputida	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas azotoformans	0	13	0.0	2.554		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas bijieensis	0	3	0.0	0.5894		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas carbonaria	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas caricapapayae	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas delhiensis	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas duriflava	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas extremorientalis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas fluvialis	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas frederiksbergensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas guangdongensis	0	4	0.0	0.7859		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas humi	0	3	0.0	0.5894		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas luteola	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas marincola	0	6	0.0	1.1788		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas massiliensis	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas mediterranea	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas mendocina	0	3	0.0	0.5894		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas mucidolens	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas oleovorans	0	3	0.0	0.5894		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas oryzae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas oryzihabitans	0	19	0.0	3.7328		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas pharmacofabricae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas phenolilytica	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas psychrophila	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas putida	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas savastanoi	0	4	0.0	0.7859		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas schmalbachii	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas seleniipraecipitans	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas syringae	0	2	0.0	0.3929		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas tarimensis	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas tolaasii	0	1	0.0	0.1965		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas viridiflava	0	4	0.0	0.7859		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Pseudomonas zeshuii	0	4	0.0	0.7859		Laggard-exclusive	Laggard	Protein degradation; Amino acid catabolism; Biofilm formation	Branched-chain amino acid degradation; TCA cycle	protein_fermenter	literature-curated	Silby et al. 2011, Pseudomonas	True	Genus 'pseudomonas' is a known reagent/skin contaminant	
+Rahnella bonaserana	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Roseibium sediminis	0	6	0.0	1.1788		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Salinirepens amamiensis	0	2	0.0	0.3929		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Stutzerimonas stutzeri	0	9	0.0	1.7682		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Tatumella terrea	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Vineibacter terrae	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		
+Yersinia ruckeri	0	1	0.0	0.1965		Laggard-exclusive	Laggard	unknown (no curated entry)		unknown	none		False		

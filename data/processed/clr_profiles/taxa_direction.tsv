@@ -1,0 +1,192 @@
+taxon	Jumper	Laggard	rel_abund_jumper_pct	rel_abund_laggard_pct	clr_Jumper	clr_Laggard	fold_diff	direction	exclusive_to	contaminant_flag	contamination_score	contamination_risk	contaminant_reason	contamination_rationale
+Jiulongibacter sediminis	298	17	55.4935	3.3399	5.1524	2.0458	3.1066	Jumper-enriched	none	False	0.0	LOW		No contaminant indicators
+Citrobacter koseri	13	2	2.4209	0.3929	2.0203	-0.0943	2.1146	Jumper-enriched	none	False	0.0223	LOW		No contaminant indicators
+Klebsiella variicola	34	9	6.3315	1.7682	2.9817	1.4098	1.5719	Jumper-enriched	none	False	0.0052	LOW		No contaminant indicators
+Erwinia piriflorinigrans	3	1	0.5587	0.1965	0.5539	-0.7874	1.3414	Jumper-enriched	none	False	0.0995	LOW		No contaminant indicators
+Unknown	5	2	0.9311	0.3929	1.0648	-0.0943	1.1591	Jumper-enriched	none	False	0.0615	LOW		No contaminant indicators
+Cronobacter muytjensii	2	1	0.3724	0.1965	0.1485	-0.7874	0.9359	Jumper-enriched	none	False	0.1335	LOW		No contaminant indicators
+Marivita roseacus	2	1	0.3724	0.1965	0.1485	-0.7874	0.9359	Jumper-enriched	none	False	0.1335	LOW		No contaminant indicators
+Leclercia pneumoniae	4	3	0.7449	0.5894	0.8416	0.3112	0.5304	Jumper-enriched	none	False	0.0615	LOW		No contaminant indicators
+Pectobacterium cacticida	17	14	3.1657	2.7505	2.2885	1.8516	0.4369	Jumper-enriched	none	False	0.0105	LOW		No contaminant indicators
+Enterobacter mori	1	1	0.1862	0.1965	-0.5447	-0.7874	0.2428	Jumper-enriched	none	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Kluyvera georgiana	2	2	0.3724	0.3929	0.1485	-0.0943	0.2428	Jumper-enriched	none	False	0.0995	LOW		No contaminant indicators
+Mucilaginibacter koreensis	1	1	0.1862	0.1965	-0.5447	-0.7874	0.2428	Jumper-enriched	none	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Pluralibacter pyrinus	2	2	0.3724	0.3929	0.1485	-0.0943	0.2428	Jumper-enriched	none	False	0.0995	LOW		No contaminant indicators
+Rahnella aceris	1	1	0.1862	0.1965	-0.5447	-0.7874	0.2428	Jumper-enriched	none	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Agarivorans gilvus	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Alcanivorax jadensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Arcticibacterium luteifluviistationis	9	0	1.676	0.0	1.6525	NA	NA	Jumper-exclusive	Jumper	False	0.0432	LOW		No contaminant indicators
+Buchnera aphidicola	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Citrobacter bitternis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Cyclobacterium qasimii	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Dyadobacter sediminis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Emticicia soli	3	0	0.5587	0.0	0.5539	NA	NA	Jumper-exclusive	Jumper	False	0.1335	LOW		No contaminant indicators
+Endothiovibrio diazotrophicus	15	0	2.7933	0.0	2.1634	NA	NA	Jumper-exclusive	Jumper	False	0.0223	LOW		No contaminant indicators
+Enterobacter asburiae	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium jumunjinense	8	0	1.4898	0.0	1.5348	NA	NA	Jumper-exclusive	Jumper	True	0.0524	LOW	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database
+Flavobacterium phocarum	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium silvisoli	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	True	0.1976	LOW	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Fluviimonas pallidilutea	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Franconibacter helveticus	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Haliea alexandrii	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Haloferula luteola	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Insectihabitans xujianqingii	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Klebsiella quasipneumoniae	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Klebsiella quasivariicola	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Kluyvera ascorbata	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Kytococcus sedentarius	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Mangrovibacter plantisponsor	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Maribius pelagius	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Mesorhizobium septentrionale	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Methylococcus capsulatus	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Methylotenera mobilis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Novispirillum itersonii	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pantoea agglomerans	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Pantoea dispersa	3	0	0.5587	0.0	0.5539	NA	NA	Jumper-exclusive	Jumper	False	0.1335	LOW		No contaminant indicators
+Paracoccus salipaludis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pectobacterium polaris	3	0	0.5587	0.0	0.5539	NA	NA	Jumper-exclusive	Jumper	False	0.1335	LOW		No contaminant indicators
+Pelagerythrobacter marensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Peptoniphilus faecalis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Phaeocystidibacter luteus	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Phaeodactylibacter luteus	3	0	0.5587	0.0	0.5539	NA	NA	Jumper-exclusive	Jumper	False	0.1335	LOW		No contaminant indicators
+Phycisphaera mikurensis	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Phytobacter diazotrophicus	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pontibacter roseus	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Proteus faecis	3	0	0.5587	0.0	0.5539	NA	NA	Jumper-exclusive	Jumper	False	0.1335	LOW		No contaminant indicators
+Pseudoalteromonas arabiensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudoalteromonas fenneropenaei	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Pseudoalteromonas luteoviolacea	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudoalteromonas peptidolytica	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudoalteromonas phenolica	10	0	1.8622	0.0	1.7579	NA	NA	Jumper-exclusive	Jumper	False	0.0366	LOW		No contaminant indicators
+Pseudoalteromonas telluritireducens	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudoalteromonas translucida	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudoalteromonas xiamenensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas arcuscaelestis	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas saponiphila	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Rahnella inusitata	4	0	0.7449	0.0	0.8416	NA	NA	Jumper-exclusive	Jumper	False	0.0995	LOW		No contaminant indicators
+Ralstonia pickettii	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	True	0.1976	LOW	Genus 'ralstonia' is a known reagent/skin contaminant	Genus 'ralstonia' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Raoultella electrica	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Rhizorhapis suberifaciens	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Ruegeria pomeroyi	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Runella soli	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Salipiger aestuarii	2	0	0.3724	0.0	0.1485	NA	NA	Jumper-exclusive	Jumper	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Serratia ficaria	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Serratia ureilytica	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Shewanella litorisediminis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Shewanella maritima	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Siccibacter turicensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Sphingomonas koreensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	True	0.8646	HIGH	Genus 'sphingomonas' is a known reagent/skin contaminant	Genus 'sphingomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Stutzerimonas kunmingensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Thalassotalea marina	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Thiohalospira halophila	6	0	1.1173	0.0	1.2471	NA	NA	Jumper-exclusive	Jumper	False	0.0733	LOW		No contaminant indicators
+Thiomicrorhabdus heinhorstiae	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Trabulsiella guamensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Vibrio cholerae	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Vibrio litoralis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Vibrio pelagius	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Yersinia rochesterensis	1	0	0.1862	0.0	-0.5447	NA	NA	Jumper-exclusive	Jumper	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Moraxella osloensis	1	35	0.1862	6.8762	-0.5447	2.7679	-3.3126	Laggard-enriched	none	False	0.0079	LOW		No contaminant indicators
+Exiguobacterium aestuarii	1	20	0.1862	3.9293	-0.5447	2.2083	-2.753	Laggard-enriched	none	False	0.0131	LOW		No contaminant indicators
+Flavobacterium haoranii	3	12	0.5587	2.3576	0.5539	1.6975	-1.1435	Laggard-enriched	none	True	0.0223	LOW	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database
+Mariniblastus fucicola	3	12	0.5587	2.3576	0.5539	1.6975	-1.1435	Laggard-enriched	none	False	0.0223	LOW		No contaminant indicators
+Providencia stuartii	1	3	0.1862	0.5894	-0.5447	0.3112	-0.8558	Laggard-enriched	none	False	0.0995	LOW		No contaminant indicators
+Pseudomonas alcaligenes	2	5	0.3724	0.9823	0.1485	0.822	-0.6735	Laggard-enriched	none	True	0.0615	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas tianjinensis	1	2	0.1862	0.3929	-0.5447	-0.0943	-0.4504	Laggard-enriched	none	True	0.1335	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Acinetobacter chinensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'acinetobacter' is a known reagent/skin contaminant	Genus 'acinetobacter' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Acinetobacter indicus	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'acinetobacter' is a known reagent/skin contaminant	Genus 'acinetobacter' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Aeromonas dhakensis	0	9	0.0	1.7682	NA	1.4098	NA	Laggard-exclusive	Laggard	False	0.0432	LOW		No contaminant indicators
+Aeromonas lusitana	0	6	0.0	1.1788	NA	1.0043	NA	Laggard-exclusive	Laggard	False	0.0733	LOW		No contaminant indicators
+Anatilimnocola aggregata	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Azomonas agilis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Azotobacter nigricans	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Brachybacterium aquaticum	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Brenneria rubrifaciens	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Brevundimonas aurantiaca	0	5	0.0	0.9823	NA	0.822	NA	Laggard-exclusive	Laggard	False	0.0825	LOW		No contaminant indicators
+Brevundimonas kwangchunensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Citrobacter freundii	0	4	0.0	0.7859	NA	0.5988	NA	Laggard-exclusive	Laggard	False	0.0995	LOW		No contaminant indicators
+Cupriavidus necator	0	7	0.0	1.3752	NA	1.1585	NA	Laggard-exclusive	Laggard	False	0.0615	LOW		No contaminant indicators
+Cupriavidus plantarum	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Cupriavidus yeoncheonensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Cutibacterium acnes	0	91	0.0	17.8782	NA	3.7234	NA	Laggard-exclusive	Laggard	False	0.0026	LOW		No contaminant indicators
+Cutibacterium namnetense	0	9	0.0	1.7682	NA	1.4098	NA	Laggard-exclusive	Laggard	False	0.0432	LOW		No contaminant indicators
+Enterobacter cloacae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Entomohabitans teleogrylli	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Entomomonas moraniae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Exiguobacterium alkaliphilum	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	False	0.1335	LOW		No contaminant indicators
+Exiguobacterium marinum	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	False	0.1335	LOW		No contaminant indicators
+Exiguobacterium undae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium caeni	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium dongtanense	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium enshiense	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium luticocti	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium palustre	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Flavobacterium xanthum	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'flavobacterium' is a known reagent/skin contaminant	Genus 'flavobacterium' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Gemmata massiliana	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Halopseudomonas pelagia	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Hansschlegelia beijingensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Janibacter endophyticus	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Kosakonia arachidis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Lewinella cohaerens	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Limnoglobus roseus	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Luminiphilus syltensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Luteimonas abyssi	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Lysobacter brunescens	0	5	0.0	0.9823	NA	0.822	NA	Laggard-exclusive	Laggard	False	0.0825	LOW		No contaminant indicators
+Massilia agri	0	4	0.0	0.7859	NA	0.5988	NA	Laggard-exclusive	Laggard	False	0.0995	LOW		No contaminant indicators
+Massilia alkalitolerans	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Massilia arenae	0	11	0.0	2.1611	NA	1.6104	NA	Laggard-exclusive	Laggard	False	0.034	LOW		No contaminant indicators
+Massilia arvi	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Massilia haematophila	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	False	0.1335	LOW		No contaminant indicators
+Massilia niastensis	0	6	0.0	1.1788	NA	1.0043	NA	Laggard-exclusive	Laggard	False	0.0733	LOW		No contaminant indicators
+Massilia norwichensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Massilia pinisoli	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Massilia rhizosphaerae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Massilia terrae	0	8	0.0	1.5717	NA	1.292	NA	Laggard-exclusive	Laggard	False	0.0524	LOW		No contaminant indicators
+Massilia yuzhufengensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Methylovulum psychrotolerans	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Moraxella atlantae	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Moraxella lacunata	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Moritella profunda	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pantoea alhagi	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Paraburkholderia pallida	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas aeruginosa	0	8	0.0	1.5717	NA	1.292	NA	Laggard-exclusive	Laggard	True	0.0524	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas alkylphenolica	0	13	0.0	2.554	NA	1.7775	NA	Laggard-exclusive	Laggard	True	0.0301	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas alloputida	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas azotoformans	0	13	0.0	2.554	NA	1.7775	NA	Laggard-exclusive	Laggard	True	0.0301	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas bijieensis	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	True	0.1335	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas carbonaria	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas caricapapayae	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas delhiensis	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas duriflava	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas extremorientalis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas fluvialis	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas frederiksbergensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas guangdongensis	0	4	0.0	0.7859	NA	0.5988	NA	Laggard-exclusive	Laggard	True	0.0995	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas humi	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	True	0.1335	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas luteola	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas marincola	0	6	0.0	1.1788	NA	1.0043	NA	Laggard-exclusive	Laggard	True	0.0733	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas massiliensis	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas mediterranea	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas mendocina	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	True	0.1335	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas mucidolens	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas oleovorans	0	3	0.0	0.5894	NA	0.3112	NA	Laggard-exclusive	Laggard	True	0.1335	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas oryzae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas oryzihabitans	0	19	0.0	3.7328	NA	2.157	NA	Laggard-exclusive	Laggard	True	0.0157	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas pharmacofabricae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas phenolilytica	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas psychrophila	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas putida	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas savastanoi	0	4	0.0	0.7859	NA	0.5988	NA	Laggard-exclusive	Laggard	True	0.0995	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas schmalbachii	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas seleniipraecipitans	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas syringae	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	True	0.1976	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Singleton/doubleton — possible stochastic contaminant
+Pseudomonas tarimensis	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas tolaasii	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	True	0.8646	HIGH	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database; Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Pseudomonas viridiflava	0	4	0.0	0.7859	NA	0.5988	NA	Laggard-exclusive	Laggard	True	0.0995	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Pseudomonas zeshuii	0	4	0.0	0.7859	NA	0.5988	NA	Laggard-exclusive	Laggard	True	0.0995	LOW	Genus 'pseudomonas' is a known reagent/skin contaminant	Genus 'pseudomonas' in contaminant database
+Rahnella bonaserana	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Roseibium sediminis	0	6	0.0	1.1788	NA	1.0043	NA	Laggard-exclusive	Laggard	False	0.0733	LOW		No contaminant indicators
+Salinirepens amamiensis	0	2	0.0	0.3929	NA	-0.0943	NA	Laggard-exclusive	Laggard	False	0.1976	LOW		Singleton/doubleton — possible stochastic contaminant
+Stutzerimonas stutzeri	0	9	0.0	1.7682	NA	1.4098	NA	Laggard-exclusive	Laggard	False	0.0432	LOW		No contaminant indicators
+Tatumella terrea	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Vineibacter terrae	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant
+Yersinia ruckeri	0	1	0.0	0.1965	NA	-0.7874	NA	Laggard-exclusive	Laggard	False	0.8646	HIGH		Low abundance (score=0.86); Singleton/doubleton — possible stochastic contaminant

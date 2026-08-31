@@ -1,0 +1,21 @@
+SRR	BioSample	sex	tissue	weight_gain	strain	stage	description
+SRR21374326	SAMN30613321	male	Testis	2.61	CMr1	adult	male, testis, rep3
+SRR21374327	SAMN30613322	male	Testis	2.83	CMr1	adult	male, testis, rep2
+SRR21374328	SAMN30613323	male	Testis	2.05	CMr1	adult	male, testis, rep1
+SRR21374329	SAMN30613324	male	Hepatopancreas	2.77	CMr1	adult	male, hepatopancreas, rep5
+SRR21374330	SAMN30613325	male	Hepatopancreas	2.83	CMr1	adult	male, hepatopancreas, rep4
+SRR21374331	SAMN30613326	male	Hepatopancreas	1.61	CMr1	adult	male, hepatopancreas, rep3
+SRR21374332	SAMN30613327	male	Hepatopancreas	3.69	CMr1	adult	male, hepatopancreas, rep2
+SRR21374333	SAMN30613328	male	Hepatopancreas	2.06	CMr1	adult	male, hepatopancreas, rep1
+SRR21374334	SAMN30613329	female	Ovary	7.52	CMr1	adult	female, ovary, rep5
+SRR21374335	SAMN30613330	female	Ovary	4.98	CMr1	adult	female, ovary, rep4
+SRR21374336	SAMN30613331	female	Ovary	3.95999999999999	CMr1	adult	female, ovary, rep3
+SRR21374337	SAMN30613332	female	Ovary	5.70999999999999	CMr1	adult	female, ovary, rep2
+SRR21374338	SAMN30613333	female	Ovary	2.14	CMr1	adult	female, ovary, rep1
+SRR21374339	SAMN30613334	female	Hepatopancreas	4.45	CMr1	adult	female, hepatopancreas, rep5
+SRR21374340	SAMN30613335	female	Hepatopancreas	7.21000000000001	CMr1	adult	female, hepatopancreas, rep4
+SRR21374341	SAMN30613336	female	Hepatopancreas	7.05	CMr1	adult	female, hepatopancreas, rep3
+SRR21374342	SAMN30613319	male	Testis	2.74	CMr1	adult	male, testis, rep5
+SRR21374343	SAMN30613320	male	Testis	1.48	CMr1	adult	male, testis, rep4
+SRR21374344	SAMN30613337	female	Hepatopancreas	6.78	CMr1	adult	female, hepatopancreas, rep2
+SRR21374345	SAMN30613338	female	Hepatopancreas	4.33	CMr1	adult	female, hepatopancreas, rep1

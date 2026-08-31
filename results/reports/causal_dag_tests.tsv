@@ -1,0 +1,4 @@
+test	description	statistic	p_value	consistent_with_dag
+WG_Tissue_given_Sex	WG independent of Tissue given Sex	p=0.2641	0.264139013312962	TRUE
+M6_Sex_given_Tissue	M6 depends on Sex given Tissue	p=0.1336	0.133611963339902	FALSE
+Causal_M6_WG_given_Sex	Causal effect of M6 on WG	coef=-3.5029	0.00786742695728392	NA

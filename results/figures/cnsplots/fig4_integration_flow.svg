@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="447.84pt" height="396.897pt" viewBox="0 0 447.84 396.897" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-09T17:45:33.283097</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 396.897 
+L 447.84 396.897 
+L 447.84 0 
+L 0 0 
+L 0 396.897 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="45.922969" transform="rotate(-0 5.184 45.922969)">Aeromonas dhakensis</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 69.589951 45.123009 
+Q 112.319099 58.38972 154.514371 71.490672 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 151.932718 69.013764 
+L 154.514371 71.490672 
+L 150.983853 72.069849 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="65.326969" transform="rotate(-0 5.184 65.326969)">Aeromonas lusitana</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 69.671689 64.119516 
+Q 112.320905 68.092084 154.413513 72.012807 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 151.375695 70.122923 
+L 154.413513 72.012807 
+L 151.078915 73.309131 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="84.730969" transform="rotate(-0 5.184 84.730969)">Citrobacter bitternis</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 69.235752 84.593893 
+Q 112.320169 119.374137 154.969612 153.803243 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.484684 150.548249 
+L 154.969612 153.803243 
+L 151.47466 153.038189 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="104.134969" transform="rotate(-0 5.184 104.134969)">Citrobacter freundii</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 69.404678 103.759421 
+Q 112.320626 129.07637 154.755094 154.109283 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 152.811891 151.105292 
+L 154.755094 154.109283 
+L 151.185979 153.861451 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="123.538969" transform="rotate(-0 5.184 123.538969)">Citrobacter koseri</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 69.551807 122.843399 
+Q 112.318282 138.77736 154.560918 154.516148 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 152.120902 151.8996 
+L 154.560918 154.516148 
+L 151.00367 154.898232 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="142.937891" transform="rotate(-0 5.184 142.937891)">Klebsiella quasipneumoniae</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 69.655342 141.856656 
+Q 112.320538 148.480083 154.433334 155.017755 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 151.516658 152.9458 
+L 154.433334 155.017755 
+L 151.025763 156.107923 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="162.341891" transform="rotate(-0 5.184 162.341891)">Klebsiella quasivariicola</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 69.677139 160.829984 
+Q 112.321028 158.181936 154.406975 155.568535 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 151.113963 154.169938 
+L 154.406975 155.568535 
+L 151.312291 157.363786 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="181.750969" transform="rotate(-0 5.184 181.750969)">Klebsiella variicola</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 69.606299 179.819724 
+Q 112.319454 167.884153 154.494218 156.099027 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 150.98168 155.419261 
+L 154.494218 156.099027 
+L 151.842883 158.501198 
+" style="fill: none; opacity: 0.5; stroke: #ff9800; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="201.154969" transform="rotate(-0 5.184 201.154969)">Pseudoalteromonas arabiensis</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 68.827061 198.123739 
+Q 112.3193 136.007 155.490912 74.34819 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 152.344868 76.051834 
+L 155.490912 74.34819 
+L 154.966201 77.887212 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="220.558969" transform="rotate(-0 5.184 220.558969)">Pseudoalteromonas fenneropenaei</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 68.719438 217.455537 
+Q 112.320665 145.706906 155.631582 74.435998 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 152.602425 76.339733 
+L 155.631582 74.435998 
+L 155.337076 78.001565 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="239.962969" transform="rotate(-0 5.184 239.962969)">Pseudoalteromonas luteoviolacea</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 68.626802 236.8062 
+Q 112.320977 155.40818 155.750758 74.502701 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 152.827547 76.565426 
+L 155.750758 74.502701 
+L 155.647011 78.078905 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="259.366969" transform="rotate(-0 5.184 259.366969)">Pseudoalteromonas peptidolytica</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 68.547788 256.168791 
+Q 112.32017 165.111646 155.850356 74.558327 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.02191 76.749193 
+L 155.850356 74.558327 
+L 155.90598 78.135604 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="278.770969" transform="rotate(-0 5.184 278.770969)">Pseudoalteromonas phenolica</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 68.476948 275.546947 
+Q 112.319507 174.815134 155.938973 74.595892 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.194853 76.891499 
+L 155.938973 74.595892 
+L 156.128986 78.168552 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="298.174969" transform="rotate(-0 5.184 298.174969)">Pseudoalteromonas telluritireducens</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 68.419731 294.921635 
+Q 112.320362 184.515088 156.014443 74.628 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.345302 77.01037 
+L 156.014443 74.628 
+L 156.318854 78.192735 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="317.578969" transform="rotate(-0 5.184 317.578969)">Pseudoalteromonas translucida</text>
+   </g>
+   <g id="patch_16">
+    <path d="M 68.367964 314.306305 
+Q 112.319947 194.218145 156.079796 74.654946 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.477426 77.110078 
+L 156.079796 74.654946 
+L 156.48248 78.20992 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="336.982969" transform="rotate(-0 5.184 336.982969)">Pseudoalteromonas xiamenensis</text>
+   </g>
+   <g id="patch_17">
+    <path d="M 68.321646 333.697404 
+Q 112.319601 203.921178 156.138067 74.67437 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.595332 77.191212 
+L 156.138067 74.67437 
+L 156.6259 78.218664 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="356.386969" transform="rotate(-0 5.184 356.386969)">Vibrio cholerae</text>
+   </g>
+   <g id="patch_18">
+    <path d="M 68.283501 353.082751 
+Q 112.320687 213.619825 156.189548 74.689973 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.700258 77.259688 
+L 156.189548 74.689973 
+L 156.751746 78.223234 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="375.790969" transform="rotate(-0 5.184 375.790969)">Vibrio litoralis</text>
+   </g>
+   <g id="patch_19">
+    <path d="M 68.248081 372.475458 
+Q 112.320454 223.322465 156.234416 74.705574 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.793209 77.32101 
+L 156.234416 74.705574 
+L 156.862041 78.227802 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: start" x="5.184" y="395.177781" transform="rotate(-0 5.184 395.177781)">Vibrio pelagius</text>
+   </g>
+   <g id="patch_20">
+    <path d="M 68.214705 391.876201 
+Q 112.31957 233.027549 156.27488 74.717537 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+    <path d="M 153.877098 77.372841 
+L 156.27488 74.717537 
+L 156.960454 78.228945 
+" style="fill: none; opacity: 0.5; stroke: #4caf50; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_20">
+    <g id="patch_21">
+     <path d="M 120.00875 67.489781 
+L 193.91125 67.489781 
+Q 196.01125 67.489781 196.01125 65.389781 
+L 196.01125 50.66725 
+Q 196.01125 48.56725 193.91125 48.56725 
+L 120.00875 48.56725 
+Q 117.90875 48.56725 117.90875 50.66725 
+L 117.90875 65.389781 
+Q 117.90875 67.489781 120.00875 67.489781 
+z
+" style="fill: #e8f5e9; opacity: 0.8; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #4caf50" transform="translate(120.00875 56.040844)">Chitin degradation</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #4caf50" transform="translate(139.017578 63.934)">(13 taxa)</text>
+   </g>
+   <g id="text_21">
+    <g id="patch_22">
+     <path d="M 114.295547 167.281781 
+L 199.624453 167.281781 
+Q 201.724453 167.281781 201.724453 165.181781 
+L 201.724453 150.45925 
+Q 201.724453 148.35925 199.624453 148.35925 
+L 114.295547 148.35925 
+Q 112.195547 148.35925 112.195547 150.45925 
+L 112.195547 165.181781 
+Q 112.195547 167.281781 114.295547 167.281781 
+z
+" style="fill: #fff3e0; opacity: 0.8; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #ff9800" transform="translate(132.264766 155.832844)">Organic acid</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #ff9800" transform="translate(114.295547 163.726)">fermentation (6 taxa)</text>
+   </g>
+   <g id="patch_23">
+    <path d="M 190.203913 72.088339 
+Q 239.544966 68.091922 286.657249 64.276025 
+" style="fill: none; stroke: #4caf50; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 283.338524 62.939588 
+L 286.657249 64.276025 
+L 283.596865 66.129143 
+" style="fill: none; stroke: #4caf50; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 190.203913 119.535661 
+Q 239.544966 123.532078 286.657249 127.347975 
+" style="fill: none; stroke: #4caf50; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 283.596865 125.494857 
+L 286.657249 127.347975 
+L 283.338524 128.684412 
+" style="fill: none; stroke: #4caf50; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 190.203913 174.975661 
+Q 239.544966 178.972078 286.657249 182.787975 
+" style="fill: none; stroke: #ff9800; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 283.596865 180.934857 
+L 286.657249 182.787975 
+L 283.338524 184.124412 
+" style="fill: none; stroke: #ff9800; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_22">
+    <g id="patch_26">
+     <path d="M 239.764687 62.000469 
+L 341.995313 62.000469 
+Q 344.095312 62.000469 344.095312 59.900469 
+L 344.095312 45.177938 
+Q 344.095312 43.077938 341.995313 43.077938 
+L 239.764687 43.077938 
+Q 237.664687 43.077938 237.664687 45.177938 
+L 237.664687 59.900469 
+Q 237.664687 62.000469 239.764687 62.000469 
+z
+" style="fill: #ffffff; opacity: 0.9; stroke: #4caf50; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #4caf50" transform="translate(239.764687 50.496844)">Amino sugar &amp; nucleotide</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #4caf50" transform="translate(255.398203 58.39)">sugar metabolism</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #808080" x="290.88" y="66.706" transform="rotate(-0 290.88 66.706)">13 edges</text>
+   </g>
+   <g id="text_24">
+    <g id="patch_27">
+     <path d="M 271.608125 125.756469 
+L 310.151875 125.756469 
+Q 312.251875 125.756469 312.251875 123.656469 
+L 312.251875 116.881781 
+Q 312.251875 114.781781 310.151875 114.781781 
+L 271.608125 114.781781 
+Q 269.508125 114.781781 269.508125 116.881781 
+L 269.508125 123.656469 
+Q 269.508125 125.756469 271.608125 125.756469 
+z
+" style="fill: #ffffff; opacity: 0.9; stroke: #4caf50; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #4caf50" x="290.88" y="122.146" transform="rotate(-0 290.88 122.146)">Lysosome</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #808080" x="290.88" y="130.462" transform="rotate(-0 290.88 130.462)">13 edges</text>
+   </g>
+   <g id="text_26">
+    <g id="patch_28">
+     <path d="M 266.080312 192.284469 
+L 315.679688 192.284469 
+Q 317.779688 192.284469 317.779688 190.184469 
+L 317.779688 175.461938 
+Q 317.779688 173.361938 315.679688 173.361938 
+L 266.080312 173.361938 
+Q 263.980312 173.361938 263.980312 175.461938 
+L 263.980312 190.184469 
+Q 263.980312 192.284469 266.080312 192.284469 
+z
+" style="fill: #ffffff; opacity: 0.9; stroke: #ff9800; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #ff9800" transform="translate(266.080312 180.780844)">Citrate cycle</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #ff9800" transform="translate(268.792266 188.674)">(TCA cycle)</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 5px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #808080" x="290.88" y="196.99" transform="rotate(-0 290.88 196.99)">6 edges</text>
+   </g>
+   <g id="text_28">
+    <g id="patch_29">
+     <path d="M 379.055703 75.805781 
+L 425.904297 75.805781 
+Q 428.004297 75.805781 428.004297 73.705781 
+L 428.004297 58.70325 
+Q 428.004297 56.60325 425.904297 56.60325 
+L 379.055703 56.60325 
+Q 376.955703 56.60325 376.955703 58.70325 
+L 376.955703 73.705781 
+Q 376.955703 75.805781 379.055703 75.805781 
+z
+" style="fill: #e3f2fd; opacity: 0.8; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #5189bb" transform="translate(379.055703 64.216844)">fast_growth</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; fill: #5189bb" transform="translate(388.434063 72.25)">Jumper</text>
+   </g>
+   <g id="patch_30">
+    <path d="M 69.656091 121.816334 
+Q 217.225995 97.197667 364.46506 72.634193 
+" style="fill: none; opacity: 0.3; stroke: #5189bb; stroke-width: 0.3; stroke-linecap: round"/>
+    <path d="M 361.045397 71.582573 
+L 364.46506 72.634193 
+L 361.571966 74.738952 
+" style="fill: none; opacity: 0.3; stroke: #5189bb; stroke-width: 0.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 69.564817 179.676716 
+Q 217.225404 126.303493 364.570555 73.044286 
+" style="fill: none; opacity: 0.3; stroke: #5189bb; stroke-width: 0.3; stroke-linecap: round"/>
+    <path d="M 361.017223 72.627355 
+L 364.570555 73.044286 
+L 362.105011 75.636793 
+" style="fill: none; opacity: 0.3; stroke: #5189bb; stroke-width: 0.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(87.85875 6.64925)">Integration Network — Microbial Functions → Host Pathways</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(57.04375 15.67)">(39 edges, literature-curated bridges, NO cross-layer correlation claimed)</text>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,192 @@
+taxon	Jumper	Laggard	fold_diff	direction	contaminant_flag	contamination_score	contamination_risk	pseudocount_stable	pseudocount_stability_score	pseudocount_mean_rank	pseudocount_rank_std	sign_stable	top5_stable_pseudocount	loto_top5_stability	loto_mean_rank_shift	loto_influence_score	is_high_leverage	pseudocount_score	loto_score	combined_stability	stability_tier
+Jiulongibacter sediminis	298	17	3.1066	Jumper-enriched	False	0.0	LOW	False	0.1371	42.18	62.93	True	0.545	1.0	-0.01	0.016259	False	0.1371	0.9999	0.5685	MEDIUM
+Citrobacter koseri	13	2	2.1146	Jumper-enriched	False	0.0223	LOW	False	0.1236	70.0	70.9	True	0.182	0.0	-0.06	0.011038	False	0.1236	0.9994	0.5615	MEDIUM
+Klebsiella variicola	34	9	1.5719	Jumper-enriched	False	0.0052	LOW	False	0.1292	91.09	67.4	True	0.091	0.0	-0.45	0.008182	False	0.1292	0.9955	0.5624	MEDIUM
+Erwinia piriflorinigrans	3	1	1.3414	Jumper-enriched	False	0.0995	LOW	False	0.1258	101.91	69.46	True	0.0	0.0	-0.49	0.006968	False	0.1258	0.9951	0.5604	MEDIUM
+Unknown	5	2	1.1591	Jumper-enriched	False	0.0615	LOW	False	0.1263	106.82	69.17	True	0.0	0.0	-0.52	0.006009	False	0.1263	0.9948	0.5606	MEDIUM
+Cronobacter muytjensii	2	1	0.9359	Jumper-enriched	False	0.1335	LOW	False	0.1289	118.18	67.59	True	0.0	0.0	-0.5	0.004834	False	0.1289	0.995	0.5619	MEDIUM
+Marivita roseacus	2	1	0.9359	Jumper-enriched	False	0.1335	LOW	False	0.1335	118.36	64.92	True	0.0	0.0	-0.12	0.004834	False	0.1335	0.9988	0.5662	MEDIUM
+Leclercia pneumoniae	4	3	0.5304	Jumper-enriched	False	0.0615	LOW	False	0.1504	143.36	56.48	False	0.0	0.0	-0.35	0.0027	False	0.1504	0.9965	0.5734	MEDIUM
+Pectobacterium cacticida	17	14	0.4369	Jumper-enriched	False	0.0105	LOW	False	0.1558	147.18	54.18	False	0.0	0.0	-0.46	0.002208	False	0.1558	0.9954	0.5756	MEDIUM
+Enterobacter mori	1	1	0.2428	Jumper-enriched	False	0.1976	LOW	False	0.1643	157.18	50.86	False	0.0	0.0	-8.66	0.001186	False	0.1643	0.9134	0.5389	MEDIUM
+Kluyvera georgiana	2	2	0.2428	Jumper-enriched	False	0.0995	LOW	False	0.1541	155.91	54.89	False	0.0	0.0	32.21	0.001186	True	0.1541	0.6779	0.416	LOW
+Mucilaginibacter koreensis	1	1	0.2428	Jumper-enriched	False	0.1976	LOW	False	0.1552	155.73	54.45	False	0.0	0.0	-0.01	0.001186	False	0.1552	0.9999	0.5776	MEDIUM
+Pluralibacter pyrinus	2	2	0.2428	Jumper-enriched	False	0.0995	LOW	False	0.1639	160.0	51.01	False	0.0	0.0	4.36	0.001186	False	0.1639	0.9564	0.5602	MEDIUM
+Rahnella aceris	1	1	0.2428	Jumper-enriched	False	0.1976	LOW	False	0.1658	163.55	50.3	False	0.0	0.0	-20.73	0.001186	True	0.1658	0.7927	0.4792	LOW
+Agarivorans gilvus	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1624	70.09	51.59	False	0.182	0.0	0.02	0.001186	False	0.1624	0.9998	0.5811	MEDIUM
+Alcanivorax jadensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1576	79.27	53.47	False	0.273	0.0	-0.03	0.001186	False	0.1576	0.9997	0.5786	MEDIUM
+Arcticibacterium luteifluviistationis	9	0		Jumper-exclusive	False	0.0432	LOW	False	0.1126	73.27	78.8	False	0.182	0.0	-0.04	0.012751	False	0.1126	0.9996	0.5561	MEDIUM
+Buchnera aphidicola	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1719	68.45	48.19	False	0.091	0.0	0.38	0.001186	False	0.1719	0.9962	0.584	MEDIUM
+Citrobacter bitternis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1693	65.64	49.06	False	0.182	0.0	0.14	0.001186	False	0.1693	0.9986	0.584	MEDIUM
+Cyclobacterium qasimii	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1745	69.55	47.31	False	0.0	0.0	5.79	0.001186	False	0.1745	0.9421	0.5583	MEDIUM
+Dyadobacter sediminis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.172	65.82	48.12	False	0.0	0.0	6.38	0.001186	False	0.172	0.9362	0.5541	MEDIUM
+Emticicia soli	3	0		Jumper-exclusive	False	0.1335	LOW	False	0.1405	76.18	61.15	False	0.0	0.0	-0.18	0.006968	False	0.1405	0.9982	0.5694	MEDIUM
+Endothiovibrio diazotrophicus	15	0		Jumper-exclusive	False	0.0223	LOW	False	0.113	61.0	78.5	False	0.545	1.0	-0.02	0.015439	False	0.113	0.9998	0.5564	MEDIUM
+Enterobacter asburiae	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1741	65.82	47.45	False	0.273	0.0	-0.15	0.001186	False	0.1741	0.9985	0.5863	MEDIUM
+Flavobacterium jumunjinense	8	0		Jumper-exclusive	True	0.0524	LOW	False	0.1149	67.18	77.04	False	0.182	0.0	-0.05	0.012131	False	0.1149	0.9995	0.5572	MEDIUM
+Flavobacterium phocarum	1	0		Jumper-exclusive	True	0.8646	HIGH	False	0.1809	67.36	45.27	False	0.0	0.0	-0.24	0.001186	False	0.1809	0.9976	0.5893	MEDIUM
+Flavobacterium silvisoli	2	0		Jumper-exclusive	True	0.1976	LOW	False	0.1718	78.18	48.2	False	0.0	0.0	0.09	0.004834	False	0.1718	0.9991	0.5854	MEDIUM
+Fluviimonas pallidilutea	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1885	67.73	43.04	False	0.0	0.0	0.81	0.001186	False	0.1885	0.9919	0.5902	MEDIUM
+Franconibacter helveticus	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1666	78.0	50.03	False	0.0	0.0	0.05	0.004834	False	0.1666	0.9995	0.5831	MEDIUM
+Haliea alexandrii	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.179	69.27	45.87	False	0.0	0.0	-1.51	0.001186	False	0.179	0.9849	0.582	MEDIUM
+Haloferula luteola	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.198	69.91	40.5	False	0.0	0.0	1.77	0.001186	False	0.198	0.9823	0.5901	MEDIUM
+Insectihabitans xujianqingii	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1746	67.73	47.28	False	0.0	0.0	0.0	0.001186	False	0.1746	1.0	0.5873	MEDIUM
+Klebsiella quasipneumoniae	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1869	68.45	43.52	False	0.0	0.0	2.85	0.001186	False	0.1869	0.9715	0.5792	MEDIUM
+Klebsiella quasivariicola	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1839	68.91	44.37	False	0.0	0.0	-2.34	0.001186	False	0.1839	0.9766	0.5802	MEDIUM
+Kluyvera ascorbata	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1735	80.09	47.64	False	0.0	0.0	0.03	0.004834	False	0.1735	0.9997	0.5866	MEDIUM
+Kytococcus sedentarius	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1892	73.91	42.86	False	0.0	0.0	-19.63	0.001186	False	0.1892	0.8037	0.4964	LOW
+Mangrovibacter plantisponsor	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2152	71.27	36.47	False	0.0	0.0	28.03	0.001186	True	0.2152	0.7197	0.4674	LOW
+Maribius pelagius	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2038	74.73	39.08	False	0.0	0.0	1.25	0.001186	False	0.2038	0.9875	0.5956	MEDIUM
+Mesorhizobium septentrionale	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.186	76.45	43.75	False	0.0	0.0	0.46	0.001186	False	0.186	0.9954	0.5907	MEDIUM
+Methylococcus capsulatus	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1744	80.18	47.32	False	0.0	0.0	-0.49	0.004834	False	0.1744	0.9951	0.5848	MEDIUM
+Methylotenera mobilis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1909	74.18	42.37	False	0.0	0.0	-10.55	0.001186	False	0.1909	0.8945	0.5427	MEDIUM
+Novispirillum itersonii	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2068	72.55	38.36	False	0.0	0.0	-2.61	0.001186	False	0.2068	0.9739	0.5904	MEDIUM
+Pantoea agglomerans	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1693	80.45	49.06	False	0.0	0.0	2.9	0.004834	False	0.1693	0.971	0.5701	MEDIUM
+Pantoea dispersa	3	0		Jumper-exclusive	False	0.1335	LOW	False	0.1421	82.0	60.36	False	0.0	0.0	0.13	0.006968	False	0.1421	0.9987	0.5704	MEDIUM
+Paracoccus salipaludis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1872	72.91	43.42	False	0.0	0.0	1.06	0.001186	False	0.1872	0.9894	0.5883	MEDIUM
+Pectobacterium polaris	3	0		Jumper-exclusive	False	0.1335	LOW	False	0.1419	82.73	60.45	False	0.0	0.0	-0.11	0.006968	False	0.1419	0.9989	0.5704	MEDIUM
+Pelagerythrobacter marensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1868	70.18	43.54	False	0.0	0.0	0.54	0.001186	False	0.1868	0.9946	0.5907	MEDIUM
+Peptoniphilus faecalis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1932	69.09	41.75	False	0.0	0.0	-2.19	0.001186	False	0.1932	0.9781	0.5856	MEDIUM
+Phaeocystidibacter luteus	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1918	70.18	42.13	False	0.0	0.0	1.44	0.001186	False	0.1918	0.9856	0.5887	MEDIUM
+Phaeodactylibacter luteus	3	0		Jumper-exclusive	False	0.1335	LOW	False	0.1436	82.73	59.62	False	0.0	0.0	-0.26	0.006968	False	0.1436	0.9974	0.5705	MEDIUM
+Phycisphaera mikurensis	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1712	83.64	48.41	False	0.0	0.0	-3.56	0.004834	False	0.1712	0.9644	0.5678	MEDIUM
+Phytobacter diazotrophicus	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1903	72.91	42.54	False	0.0	0.0	-0.29	0.001186	False	0.1903	0.9971	0.5937	MEDIUM
+Pontibacter roseus	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1926	71.64	41.92	False	0.0	0.0	-1.62	0.001186	False	0.1926	0.9838	0.5882	MEDIUM
+Proteus faecis	3	0		Jumper-exclusive	False	0.1335	LOW	False	0.1423	83.0	60.25	False	0.0	0.0	-0.04	0.006968	False	0.1423	0.9996	0.571	MEDIUM
+Pseudoalteromonas arabiensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2046	69.73	38.87	False	0.0	0.0	3.85	0.001186	False	0.2046	0.9615	0.5831	MEDIUM
+Pseudoalteromonas fenneropenaei	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1697	82.91	48.92	False	0.0	0.0	-0.09	0.004834	False	0.1697	0.9991	0.5844	MEDIUM
+Pseudoalteromonas luteoviolacea	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1953	70.45	41.21	False	0.0	0.0	-1.15	0.001186	False	0.1953	0.9885	0.5919	MEDIUM
+Pseudoalteromonas peptidolytica	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2071	66.91	38.28	False	0.0	0.0	-0.62	0.001186	False	0.2071	0.9938	0.6004	MEDIUM
+Pseudoalteromonas phenolica	10	0		Jumper-exclusive	False	0.0366	LOW	False	0.1107	72.73	80.29	False	0.273	0.0	-0.03	0.013305	False	0.1107	0.9997	0.5552	MEDIUM
+Pseudoalteromonas telluritireducens	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2193	69.36	35.6	False	0.0	0.0	1.99	0.001186	False	0.2193	0.9801	0.5997	MEDIUM
+Pseudoalteromonas translucida	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.2083	67.73	38.02	False	0.0	0.0	-0.26	0.001186	False	0.2083	0.9974	0.6028	MEDIUM
+Pseudoalteromonas xiamenensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.194	74.82	41.56	False	0.0	0.0	-7.78	0.001186	False	0.194	0.9222	0.5581	MEDIUM
+Pseudomonas arcuscaelestis	2	0		Jumper-exclusive	True	0.1976	LOW	False	0.1734	83.18	47.69	False	0.0	0.0	-2.22	0.004834	False	0.1734	0.9778	0.5756	MEDIUM
+Pseudomonas saponiphila	1	0		Jumper-exclusive	True	0.8646	HIGH	False	0.1986	89.73	40.36	False	0.0	0.0	-0.79	0.001186	False	0.1986	0.9921	0.5954	MEDIUM
+Rahnella inusitata	4	0		Jumper-exclusive	False	0.0995	LOW	False	0.1247	83.36	70.19	False	0.0	0.0	-0.11	0.008483	False	0.1247	0.9989	0.5618	MEDIUM
+Ralstonia pickettii	2	0		Jumper-exclusive	True	0.1976	LOW	False	0.1504	94.36	56.51	False	0.0	0.0	0.01	0.004834	False	0.1504	0.9999	0.5752	MEDIUM
+Raoultella electrica	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1498	93.64	56.75	False	0.0	0.0	0.09	0.004834	False	0.1498	0.9991	0.5744	MEDIUM
+Rhizorhapis suberifaciens	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1703	95.55	48.71	False	0.0	0.0	2.63	0.001186	False	0.1703	0.9737	0.572	MEDIUM
+Ruegeria pomeroyi	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1457	92.64	58.64	False	0.0	0.0	-0.01	0.004834	False	0.1457	0.9999	0.5728	MEDIUM
+Runella soli	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1584	96.64	53.15	False	0.0	0.0	-3.57	0.001186	False	0.1584	0.9643	0.5614	MEDIUM
+Salipiger aestuarii	2	0		Jumper-exclusive	False	0.1976	LOW	False	0.1437	91.73	59.61	False	0.0	0.0	0.17	0.004834	False	0.1437	0.9983	0.571	MEDIUM
+Serratia ficaria	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1683	92.27	49.4	False	0.0	0.0	2.55	0.001186	False	0.1683	0.9745	0.5714	MEDIUM
+Serratia ureilytica	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1652	93.64	50.53	False	0.0	0.0	-0.91	0.001186	False	0.1652	0.9909	0.578	MEDIUM
+Shewanella litorisediminis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.162	99.45	51.73	False	0.0	0.0	-5.54	0.001186	False	0.162	0.9446	0.5533	MEDIUM
+Shewanella maritima	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1665	86.64	50.07	False	0.0	0.0	0.92	0.001186	False	0.1665	0.9908	0.5786	MEDIUM
+Siccibacter turicensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1695	88.36	49.01	False	0.0	0.0	-4.3	0.001186	False	0.1695	0.957	0.5632	MEDIUM
+Sphingomonas koreensis	1	0		Jumper-exclusive	True	0.8646	HIGH	False	0.1696	96.0	48.98	False	0.0	0.0	-11.88	0.001186	False	0.1696	0.8812	0.5254	MEDIUM
+Stutzerimonas kunmingensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1682	93.91	49.45	False	0.0	0.0	0.03	0.001186	False	0.1682	0.9997	0.584	MEDIUM
+Thalassotalea marina	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1639	93.55	50.99	False	0.0	0.0	-0.94	0.001186	False	0.1639	0.9906	0.5772	MEDIUM
+Thiohalospira halophila	6	0		Jumper-exclusive	False	0.0733	LOW	False	0.1097	81.18	81.13	False	0.0	0.0	-0.07	0.010617	False	0.1097	0.9993	0.5545	MEDIUM
+Thiomicrorhabdus heinhorstiae	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1677	96.36	49.63	False	0.0	0.0	0.01	0.001186	False	0.1677	0.9999	0.5838	MEDIUM
+Trabulsiella guamensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1635	94.73	51.18	False	0.0	0.0	-0.97	0.001186	False	0.1635	0.9903	0.5769	MEDIUM
+Vibrio cholerae	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1617	97.82	51.86	False	0.0	0.0	-3.58	0.001186	False	0.1617	0.9642	0.5629	MEDIUM
+Vibrio litoralis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.159	100.82	52.9	False	0.0	0.0	-3.59	0.001186	False	0.159	0.9641	0.5616	MEDIUM
+Vibrio pelagius	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1578	105.0	53.36	False	0.0	0.0	-0.98	0.001186	False	0.1578	0.9902	0.574	MEDIUM
+Yersinia rochesterensis	1	0		Jumper-exclusive	False	0.8646	HIGH	False	0.1564	98.91	53.93	False	0.0	0.0	-2.3	0.001186	False	0.1564	0.977	0.5667	MEDIUM
+Moraxella osloensis	1	35	-3.3126	Laggard-enriched	False	0.0079	LOW	False	0.1599	25.18	52.52	True	0.727	1.0	-0.01	0.017526	False	0.1599	0.9999	0.5799	MEDIUM
+Exiguobacterium aestuarii	1	20	-2.753	Laggard-enriched	False	0.0131	LOW	False	0.1395	40.36	61.67	True	0.455	1.0	-0.02	0.014581	False	0.1395	0.9998	0.5696	MEDIUM
+Flavobacterium haoranii	3	12	-1.1435	Laggard-enriched	True	0.0223	LOW	False	0.134	101.91	64.62	True	0.0	0.0	-3.79	0.00611	False	0.134	0.9621	0.548	MEDIUM
+Mariniblastus fucicola	3	12	-1.1435	Laggard-enriched	False	0.0223	LOW	False	0.1331	102.0	65.11	True	0.0	0.0	-2.33	0.00611	False	0.1331	0.9767	0.5549	MEDIUM
+Providencia stuartii	1	3	-0.8558	Laggard-enriched	False	0.0995	LOW	False	0.1385	114.91	62.18	False	0.0	0.0	-0.03	0.004596	False	0.1385	0.9997	0.5691	MEDIUM
+Pseudomonas alcaligenes	2	5	-0.6735	Laggard-enriched	True	0.0615	LOW	False	0.1537	129.09	55.07	False	0.0	0.0	-0.34	0.003636	False	0.1537	0.9966	0.5752	MEDIUM
+Pseudomonas tianjinensis	1	2	-0.4504	Laggard-enriched	True	0.1335	LOW	False	0.1566	138.0	53.84	False	0.0	0.0	-0.01	0.002462	False	0.1566	0.9999	0.5782	MEDIUM
+Acinetobacter chinensis	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1714	94.45	48.35	False	0.0	0.0	0.31	0.001186	False	0.1714	0.9969	0.5841	MEDIUM
+Acinetobacter indicus	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.226	102.45	34.24	False	0.0	0.0	0.67	0.002462	False	0.226	0.9933	0.6096	MEDIUM
+Aeromonas dhakensis	0	9		Laggard-exclusive	False	0.0432	LOW	False	0.1179	81.09	74.85	False	0.0	0.0	-0.01	0.010378	False	0.1179	0.9999	0.5589	MEDIUM
+Aeromonas lusitana	0	6		Laggard-exclusive	False	0.0733	LOW	False	0.1265	84.82	69.04	False	0.0	0.0	-0.05	0.008244	False	0.1265	0.9995	0.563	MEDIUM
+Anatilimnocola aggregata	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.197	105.36	40.77	False	0.0	0.0	-0.04	0.001186	False	0.197	0.9996	0.5983	MEDIUM
+Azomonas agilis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.168	101.18	49.53	False	0.0	0.0	0.65	0.001186	False	0.168	0.9935	0.5808	MEDIUM
+Azotobacter nigricans	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1691	93.18	49.12	False	0.0	0.0	0.09	0.001186	False	0.1691	0.9991	0.5841	MEDIUM
+Brachybacterium aquaticum	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2482	101.09	30.29	False	0.0	0.0	-0.56	0.002462	False	0.2482	0.9944	0.6213	MEDIUM
+Brenneria rubrifaciens	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.181	97.45	45.26	False	0.0	0.0	-2.67	0.001186	False	0.181	0.9733	0.5772	MEDIUM
+Brevundimonas aurantiaca	0	5		Laggard-exclusive	False	0.0825	LOW	False	0.1398	92.27	61.55	False	0.0	0.0	-0.09	0.007284	False	0.1398	0.9991	0.5694	MEDIUM
+Brevundimonas kwangchunensis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1652	92.36	50.55	False	0.0	0.0	-0.01	0.001186	False	0.1652	0.9999	0.5826	MEDIUM
+Citrobacter freundii	0	4		Laggard-exclusive	False	0.0995	LOW	False	0.1491	92.45	57.08	False	0.0	0.0	3.02	0.00611	False	0.1491	0.9698	0.5594	MEDIUM
+Cupriavidus necator	0	7		Laggard-exclusive	False	0.0615	LOW	False	0.1237	83.27	70.86	False	0.0	0.0	-0.1	0.009055	False	0.1237	0.999	0.5614	MEDIUM
+Cupriavidus plantarum	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2077	99.45	38.15	False	0.0	0.0	-2.51	0.002462	False	0.2077	0.9749	0.5913	MEDIUM
+Cupriavidus yeoncheonensis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1811	96.91	45.21	False	0.0	0.0	-5.19	0.001186	False	0.1811	0.9480999999999999	0.5646	MEDIUM
+Cutibacterium acnes	0	91		Laggard-exclusive	False	0.0026	LOW	False	0.135	37.27	64.07	True	0.636	1.0	0.0	0.022555	False	0.135	1.0	0.5675	MEDIUM
+Cutibacterium namnetense	0	9		Laggard-exclusive	False	0.0432	LOW	False	0.1179	80.82	74.85	False	0.0	0.0	-0.01	0.010378	False	0.1179	0.9999	0.5589	MEDIUM
+Enterobacter cloacae	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1782	94.36	46.1	False	0.0	0.0	2.74	0.001186	False	0.1782	0.9726	0.5754	MEDIUM
+Entomohabitans teleogrylli	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2057	101.0	38.62	False	0.0	0.0	-0.3	0.002462	False	0.2057	0.997	0.6014	MEDIUM
+Entomomonas moraniae	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1732	91.64	47.74	False	0.0	0.0	1.78	0.001186	False	0.1732	0.9822	0.5777	MEDIUM
+Exiguobacterium alkaliphilum	0	3		Laggard-exclusive	False	0.1335	LOW	False	0.1751	100.64	47.12	False	0.0	0.0	-0.09	0.004596	False	0.1751	0.9991	0.5871	MEDIUM
+Exiguobacterium marinum	0	3		Laggard-exclusive	False	0.1335	LOW	False	0.1718	99.27	48.19	False	0.0	0.0	-0.38	0.004596	False	0.1718	0.9962	0.584	MEDIUM
+Exiguobacterium undae	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1732	92.45	47.73	False	0.0	0.0	-1.55	0.001186	False	0.1732	0.9845	0.5788	MEDIUM
+Flavobacterium caeni	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1835	94.82	44.49	False	0.0	0.0	-0.14	0.001186	False	0.1835	0.9986	0.5911	MEDIUM
+Flavobacterium dongtanense	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1741	95.91	47.44	False	0.0	0.0	-0.59	0.001186	False	0.1741	0.9941	0.5841	MEDIUM
+Flavobacterium enshiense	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1826	94.45	44.76	False	0.0	0.0	1.92	0.001186	False	0.1826	0.9808	0.5817	MEDIUM
+Flavobacterium luticocti	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.172	94.18	48.14	False	0.0	0.0	-0.14	0.001186	False	0.172	0.9986	0.5853	MEDIUM
+Flavobacterium palustre	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1682	97.09	49.46	False	0.0	0.0	-0.24	0.001186	False	0.1682	0.9976	0.5829	MEDIUM
+Flavobacterium xanthum	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1794	92.64	45.75	False	0.0	0.0	-0.25	0.001186	False	0.1794	0.9975	0.5884	MEDIUM
+Gemmata massiliana	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1677	92.73	49.64	False	0.0	0.0	-0.26	0.001186	False	0.1677	0.9974	0.5826	MEDIUM
+Halopseudomonas pelagia	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1799	92.73	45.57	False	0.0	0.0	0.01	0.001186	False	0.1799	0.9999	0.5899	MEDIUM
+Hansschlegelia beijingensis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1699	86.91	48.87	False	0.0	0.0	0.01	0.001186	False	0.1699	0.9999	0.5849	MEDIUM
+Janibacter endophyticus	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2439	105.45	31.01	False	0.0	0.0	-0.95	0.002462	False	0.2439	0.9905	0.6172	MEDIUM
+Kosakonia arachidis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1685	95.55	49.33	False	0.0	0.0	1.07	0.001186	False	0.1685	0.9893	0.5789	MEDIUM
+Lewinella cohaerens	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2549	107.27	29.23	False	0.0	0.0	0.76	0.002462	False	0.2549	0.9924	0.6236	MEDIUM
+Limnoglobus roseus	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1587	102.73	53.02	False	0.0	0.0	-0.37	0.001186	False	0.1587	0.9963	0.5775	MEDIUM
+Luminiphilus syltensis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1565	99.27	53.89	False	0.0	0.0	-0.45	0.001186	False	0.1565	0.9955	0.576	MEDIUM
+Luteimonas abyssi	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1609	97.36	52.15	False	0.0	0.0	-0.37	0.001186	False	0.1609	0.9963	0.5786	MEDIUM
+Lysobacter brunescens	0	5		Laggard-exclusive	False	0.0825	LOW	False	0.1414	94.18	60.73	False	0.0	0.0	-0.18	0.007284	False	0.1414	0.9982	0.5698	MEDIUM
+Massilia agri	0	4		Laggard-exclusive	False	0.0995	LOW	False	0.1556	93.36	54.27	False	0.0	0.0	1.48	0.00611	False	0.1556	0.9852	0.5704	MEDIUM
+Massilia alkalitolerans	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2621	107.82	28.15	False	0.0	0.0	-1.2	0.002462	False	0.2621	0.988	0.625	MEDIUM
+Massilia arenae	0	11		Laggard-exclusive	False	0.034	LOW	False	0.1149	77.27	77.02	False	0.0	0.0	-0.06	0.011434	False	0.1149	0.9994	0.5572	MEDIUM
+Massilia arvi	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1517	103.55	55.91	False	0.0	0.0	-25.37	0.001186	True	0.1517	0.7463	0.449	LOW
+Massilia haematophila	0	3		Laggard-exclusive	False	0.1335	LOW	False	0.1831	103.55	44.61	False	0.0	0.0	0.45	0.004596	False	0.1831	0.9955	0.5893	MEDIUM
+Massilia niastensis	0	6		Laggard-exclusive	False	0.0733	LOW	False	0.1262	87.0	69.24	False	0.0	0.0	0.02	0.008244	False	0.1262	0.9998	0.563	MEDIUM
+Massilia norwichensis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1521	100.82	55.76	False	0.0	0.0	0.0	0.001186	False	0.1521	1.0	0.576	MEDIUM
+Massilia pinisoli	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1573	104.27	53.57	False	0.0	0.0	-1.76	0.001186	False	0.1573	0.9824	0.5698	MEDIUM
+Massilia rhizosphaerae	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1519	102.55	55.83	False	0.0	0.0	2.42	0.001186	False	0.1519	0.9758	0.5638	MEDIUM
+Massilia terrae	0	8		Laggard-exclusive	False	0.0524	LOW	False	0.121	85.18	72.64	False	0.0	0.0	-0.15	0.009758	False	0.121	0.9985	0.5598	MEDIUM
+Massilia yuzhufengensis	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1631	97.64	51.3	False	0.0	0.0	0.45	0.001186	False	0.1631	0.9955	0.5793	MEDIUM
+Methylovulum psychrotolerans	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1583	100.09	53.16	False	0.0	0.0	-0.43	0.001186	False	0.1583	0.9957	0.577	MEDIUM
+Moraxella atlantae	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2589	109.18	28.63	False	0.0	0.0	-3.54	0.002462	False	0.2589	0.9646	0.6118	MEDIUM
+Moraxella lacunata	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2741	110.64	26.49	False	0.0	0.0	-0.49	0.002462	False	0.2741	0.9951	0.6346	MEDIUM
+Moritella profunda	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.164	101.0	50.98	False	0.0	0.0	-0.01	0.001186	False	0.164	0.9999	0.582	MEDIUM
+Pantoea alhagi	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1582	104.18	53.19	False	0.0	0.0	2.93	0.001186	False	0.1582	0.9707	0.5644	MEDIUM
+Paraburkholderia pallida	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.165	100.82	50.61	False	0.0	0.0	1.97	0.001186	False	0.165	0.9803	0.5726	MEDIUM
+Pseudomonas aeruginosa	0	8		Laggard-exclusive	True	0.0524	LOW	False	0.1202	88.82	73.17	False	0.0	0.0	-0.03	0.009758	False	0.1202	0.9997	0.56	MEDIUM
+Pseudomonas alkylphenolica	0	13		Laggard-exclusive	True	0.0301	LOW	False	0.1154	75.27	76.66	False	0.0	0.0	-0.06	0.012313	False	0.1154	0.9994	0.5574	MEDIUM
+Pseudomonas alloputida	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1612	102.55	52.05	False	0.0	0.0	2.56	0.001186	False	0.1612	0.9744	0.5678	MEDIUM
+Pseudomonas azotoformans	0	13		Laggard-exclusive	True	0.0301	LOW	False	0.1146	75.64	77.3	False	0.0	0.0	-0.03	0.012313	False	0.1146	0.9997	0.5572	MEDIUM
+Pseudomonas bijieensis	0	3		Laggard-exclusive	True	0.1335	LOW	False	0.185	107.18	44.07	False	0.0	0.0	-1.11	0.004596	False	0.185	0.9889	0.587	MEDIUM
+Pseudomonas carbonaria	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.167	119.55	49.87	False	0.0	0.0	-18.48	0.001186	False	0.167	0.8152	0.4911	LOW
+Pseudomonas caricapapayae	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2369	113.91	32.2	False	0.0	0.0	-2.14	0.002462	False	0.2369	0.9786	0.6078	MEDIUM
+Pseudomonas delhiensis	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2294	112.27	33.59	False	0.0	0.0	0.01	0.002462	False	0.2294	0.9999	0.6146	MEDIUM
+Pseudomonas duriflava	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1643	118.73	50.86	False	0.0	0.0	-0.18	0.001186	False	0.1643	0.9982	0.5812	MEDIUM
+Pseudomonas extremorientalis	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.157	118.45	53.71	False	0.0	0.0	-0.73	0.001186	False	0.157	0.9927	0.5748	MEDIUM
+Pseudomonas fluvialis	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2293	114.64	33.61	False	0.0	0.0	1.99	0.002462	False	0.2293	0.9801	0.6047	MEDIUM
+Pseudomonas frederiksbergensis	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1651	120.27	50.57	False	0.0	0.0	-0.37	0.001186	False	0.1651	0.9963	0.5807	MEDIUM
+Pseudomonas guangdongensis	0	4		Laggard-exclusive	True	0.0995	LOW	False	0.147	101.73	58.01	False	0.0	0.0	0.41	0.00611	False	0.147	0.9959	0.5714	MEDIUM
+Pseudomonas humi	0	3		Laggard-exclusive	True	0.1335	LOW	False	0.1758	108.0	46.88	False	0.0	0.0	4.51	0.004596	False	0.1758	0.9549	0.5654	MEDIUM
+Pseudomonas luteola	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2299	117.27	33.51	False	0.0	0.0	-6.94	0.002462	False	0.2299	0.9306	0.5802	MEDIUM
+Pseudomonas marincola	0	6		Laggard-exclusive	True	0.0733	LOW	False	0.1263	92.09	69.15	False	0.0	0.0	-0.22	0.008244	False	0.1263	0.9978	0.5621	MEDIUM
+Pseudomonas massiliensis	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2296	115.36	33.56	False	0.0	0.0	2.19	0.002462	False	0.2296	0.9781	0.6038	MEDIUM
+Pseudomonas mediterranea	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1693	115.45	49.08	False	0.0	0.0	-1.43	0.001186	False	0.1693	0.9857	0.5775	MEDIUM
+Pseudomonas mendocina	0	3		Laggard-exclusive	True	0.1335	LOW	False	0.188	109.36	43.18	False	0.0	0.0	-4.73	0.004596	False	0.188	0.9527	0.5704	MEDIUM
+Pseudomonas mucidolens	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2231	119.0	34.82	False	0.0	0.0	4.83	0.002462	False	0.2231	0.9517	0.5874	MEDIUM
+Pseudomonas oleovorans	0	3		Laggard-exclusive	True	0.1335	LOW	False	0.1809	108.09	45.26	False	0.0	0.0	-1.17	0.004596	False	0.1809	0.9883	0.5846	MEDIUM
+Pseudomonas oryzae	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1601	118.18	52.46	False	0.0	0.0	-3.06	0.001186	False	0.1601	0.9694	0.5648	MEDIUM
+Pseudomonas oryzihabitans	0	19		Laggard-exclusive	True	0.0157	LOW	False	0.1103	75.18	80.63	False	0.182	0.026	-0.03	0.014311	False	0.1103	0.9997	0.555	MEDIUM
+Pseudomonas pharmacofabricae	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1583	122.55	53.18	False	0.0	0.0	1.05	0.001186	False	0.1583	0.9895	0.5739	MEDIUM
+Pseudomonas phenolilytica	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.158	122.0	53.27	False	0.0	0.0	0.77	0.001186	False	0.158	0.9923	0.5751	MEDIUM
+Pseudomonas psychrophila	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.15	120.55	56.66	False	0.0	0.0	-0.76	0.001186	False	0.15	0.9924	0.5712	MEDIUM
+Pseudomonas putida	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1608	124.0	52.21	False	0.0	0.0	0.78	0.001186	False	0.1608	0.9922	0.5765	MEDIUM
+Pseudomonas savastanoi	0	4		Laggard-exclusive	True	0.0995	LOW	False	0.149	100.55	57.12	False	0.0	0.0	0.05	0.00611	False	0.149	0.9995	0.5742	MEDIUM
+Pseudomonas schmalbachii	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2271	119.55	34.03	False	0.0	0.0	2.42	0.002462	False	0.2271	0.9758	0.6014	MEDIUM
+Pseudomonas seleniipraecipitans	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2275	116.73	33.96	False	0.0	0.0	3.47	0.002462	False	0.2275	0.9653	0.5964	MEDIUM
+Pseudomonas syringae	0	2		Laggard-exclusive	True	0.1976	LOW	False	0.2284	118.64	33.78	False	0.0	0.0	-5.71	0.002462	False	0.2284	0.9429	0.5856	MEDIUM
+Pseudomonas tarimensis	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.165	119.73	50.61	False	0.0	0.0	0.16	0.001186	False	0.165	0.9984	0.5817	MEDIUM
+Pseudomonas tolaasii	0	1		Laggard-exclusive	True	0.8646	HIGH	False	0.1623	116.18	51.63	False	0.0	0.0	-9.61	0.001186	False	0.1623	0.9039	0.5331	MEDIUM
+Pseudomonas viridiflava	0	4		Laggard-exclusive	True	0.0995	LOW	False	0.1482	104.18	57.47	False	0.0	0.0	-0.93	0.00611	False	0.1482	0.9907	0.5694	MEDIUM
+Pseudomonas zeshuii	0	4		Laggard-exclusive	True	0.0995	LOW	False	0.1502	104.09	56.57	False	0.0	0.0	0.81	0.00611	False	0.1502	0.9919	0.5711	MEDIUM
+Rahnella bonaserana	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1689	131.55	49.21	False	0.0	0.0	0.0	0.001186	False	0.1689	1.0	0.5844	MEDIUM
+Roseibium sediminis	0	6		Laggard-exclusive	False	0.0733	LOW	False	0.122	94.82	71.98	False	0.0	0.0	0.08	0.008244	False	0.122	0.9992	0.5606	MEDIUM
+Salinirepens amamiensis	0	2		Laggard-exclusive	False	0.1976	LOW	False	0.2144	118.18	36.63	False	0.0	0.0	-0.05	0.002462	False	0.2144	0.9995	0.607	MEDIUM
+Stutzerimonas stutzeri	0	9		Laggard-exclusive	False	0.0432	LOW	False	0.1109	92.18	80.14	False	0.0	0.0	-0.22	0.010378	False	0.1109	0.9978	0.5544	MEDIUM
+Tatumella terrea	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1557	132.55	54.23	False	0.0	0.0	0.94	0.001186	False	0.1557	0.9906	0.5732	MEDIUM
+Vineibacter terrae	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1588	135.55	52.99	False	0.0	0.0	-0.99	0.001186	False	0.1588	0.9901	0.5744	MEDIUM
+Yersinia ruckeri	0	1		Laggard-exclusive	False	0.8646	HIGH	False	0.1577	137.36	53.42	False	0.0	0.0	-2.31	0.001186	False	0.1577	0.9769	0.5673	MEDIUM

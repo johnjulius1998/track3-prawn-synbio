@@ -1,0 +1,9 @@
+functional_category	gene_count	pct_of_M6_hubs	example_genes
+other_uncharacterized	59	81.9	XM_067086030.1; XM_067082934.1; XM_067114945.1; XM_067105068.1; EL695914.1
+transcription_signaling	4	5.6	XM_067095058.1; XM_067104953.1; XM_067133196.1; XM_067107357.1
+energy_metabolism	3	4.2	XM_067089690.1; XM_067115250.1; XM_067116168.1
+translation_ribosome	3	4.2	XM_067087534.1; EL609362.1; XM_067096515.1
+protein_degradation	3	4.2	EL609362.1; XM_067109294.1; XM_067100814.1
+growth_molting	1	1.4	XM_067106657.1
+stress_response	1	1.4	XM_067105018.1
+immune_response	1	1.4	XM_067122492.1

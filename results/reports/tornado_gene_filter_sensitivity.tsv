@@ -1,0 +1,6 @@
+parameter	value	genes_retained	pct_retained
+gene_filter_min_tpm	TPM≥0.5	18276	100.0
+gene_filter_min_tpm	TPM≥1.0	18276	100.0
+gene_filter_min_tpm	TPM≥2.0	14557	79.7
+gene_filter_min_tpm	TPM≥5.0	9521	52.1
+gene_filter_min_tpm	TPM≥10.0	6133	33.6

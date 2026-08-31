@@ -1,0 +1,11 @@
+gene	wgcna_module	wgcna_rank	wgcna_kME	spls_rank	rf_rank	spls_selected	rf_selected	validated_by_both
+XM_067086030.1	M6	1	0.8454		9671	False	False	False
+XM_067082934.1	M6	2	0.7388		9671	False	False	False
+XM_067114945.1	M6	3	0.7127		9671	False	False	False
+XM_067127262.1	M8	4	0.6207		9671	False	False	False
+XM_067113377.1	M8	5	0.6161		9671	False	False	False
+GH624888.1	M8	6	0.6044		9671	False	False	False
+XM_067113580.1	M7	7	-0.7367		9671	False	False	False
+JP354355.1	M7	8	-0.6908		9671	False	False	False
+XM_067102939.1	M12	9	0.9169		9671	False	False	False
+JP354756.1	M12	10	0.8952		9671	False	False	False

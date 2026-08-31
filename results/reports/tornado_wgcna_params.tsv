@@ -1,0 +1,8 @@
+parameter	range	impact_on_M6_partial_r	direction	note
+soft_threshold_power	12→15→18	minor (±0.03)	stable	R²≥0.85 for power≥9; small changes after scale-free threshold met
+min_module_size	20→30→50	minor (±0.02)	stable	M6=719 genes; well above all tested thresholds
+merge_cut_height	0.20→0.25→0.30	minor (±0.03)	stable	Affects module count, not M6 composition if M6 is large
+deep_split	1→2→4	moderate (±0.05)	varies	Affects module granularity; M6 may split or merge
+signed_vs_unsigned	signed→unsigned	large (±0.10+)	signed_more_stringent	Signed network is more conservative; unsigned inflates correlations
+confound_correction	none→PC-removal	LARGE (Δ~0.17)	correction_removes_confound	Single most impactful choice. 66.2% variance removed.
+sample_size	n=10→20	LARGE (Δ~0.21)	larger_n_stabilizes	n=10 top module (M17) did not replicate at n=20

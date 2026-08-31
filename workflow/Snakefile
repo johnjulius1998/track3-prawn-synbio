@@ -1,0 +1,800 @@
+# ================================================================
+# Snakefile — Track 3 Host-Microbe Integration
+# GUARDRAILED for WSL/Ubuntu: 7.7 GB RAM, 2 GB swap
+#
+# CRITICAL RULES:
+#   1. All rules declare mem_mb — NEVER omit this.
+#   2. Run from the REPO ROOT with: snakemake --profile workflow/profiles/local
+#   3. Pre-flight check: bash src/utils/preflight_check.sh
+#
+# PATH SEMANTICS (do not "simplify" these):
+#   - configfile:/input:/output:/shell: paths are relative to the WORKING
+#     DIRECTORY (repo root).
+#   - conda: paths are relative to THIS FILE (workflow/), hence the "../".
+#
+# PROVENANCE NOTE — how the shipped results were actually produced:
+#   The 20 PRJNA875278 samples were run through
+#   src/rnaseq/process_all_samples.sh (a serial download → fastp → salmon
+#   driver with RAM/disk guards), NOT through the per-sample rules below.
+#   The rules encode the same commands and file layout so the DAG is
+#   reproducible, but re-running them will re-download raw data that the
+#   batch script has already deleted to save disk.
+# ================================================================
+
+configfile: "config/project_config.yaml"
+
+SRA_DIR = "data/raw/sra/PRJNA875278"
+SAMPLE_SHEET = SRA_DIR + "/samples_corrected.tsv"
+
+# Sample IDs come from the curated (headerless) sheet written during download.
+# Fall back to an empty list so the microbial/integration DAG still resolves
+# on a fresh clone that has no SRA data yet.
+try:
+    with open(SAMPLE_SHEET) as fh:
+        SAMPLES = [ln.split("\t")[0].strip() for ln in fh if ln.startswith("SRR")]
+except FileNotFoundError:
+    SAMPLES = []
+
+
+# ---- TOP-LEVEL TARGETS ----
+rule all:
+    input:
+        "results/shortlist/host_genes.csv",
+        "results/shortlist/microbial_taxa.csv",
+        "results/shortlist/pathways.csv",
+        "results/shortlist/ranking_methodology.md",
+        "results/shortlist/network_edges.csv",
+        "results/reports/confound_report.tsv",
+        "results/reports/taxon_confidence_report.tsv",
+        "results/reports/wgcna_bootstrap_stability.tsv",
+        "results/reports/deseq2_cross_validation.tsv",
+        "results/reports/deseq2_module_eigengene_test.tsv",
+        "results/reports/spls_rf_wgcna_comparison.tsv",
+        "data/processed/gene_expression/corrected_tpm.tsv"
+
+
+# Optional targets — NOT in `all` (see the rules for why).
+rule qc_all:
+    input:
+        expand("results/logs/fastqc/{sample}_1_fastqc.html", sample=SAMPLES)
+
+rule figures:
+    input:
+        "results/figures/cnsplots/fig8_multipanel_summary.svg"
+
+rule wgcna_corrected:
+    input:
+        "data/processed/wgcna/hub_genes_corrected.tsv"
+
+
+# ================================================================
+# MICROBIAL LAYER (Approach 2) — Directional only, no statistics
+# ================================================================
+
+rule process_asv_clr:
+    """CLR-transform pooled ASV table. Identifies Jumper/Laggard-enriched taxa."""
+    input:
+        "data/raw/supplied/ASV_table_Jumpers_Laggards.GKAQUA.csv"
+    output:
+        "data/processed/clr_profiles/taxa_direction.tsv"
+    params:
+        min_reads=100,
+        contaminant_list="config/contaminant_genera.txt"
+    resources:
+        mem_mb=1024,   # Lightweight — only 191 taxa
+        runtime=5
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/asv/01_clr_transform.py --in {input} --out {output} "
+        "--min-reads {params.min_reads} --contaminants {params.contaminant_list}"
+
+
+rule predict_functions:
+    """Functional annotation of ASV taxa.
+
+    NOT a PICRUSt2 run — the supplied ASV table has genus names only, no 16S
+    sequences, so src/asv/02_picrust_inference.py uses a curated genus→function
+    literature map and tags every call with its evidence basis. Cheap and fast;
+    the script name is historical."""
+    input:
+        "data/processed/clr_profiles/taxa_direction.tsv"
+    output:
+        "data/processed/clr_profiles/taxa_functions.tsv"
+    resources:
+        mem_mb=1024,   # Pure table lookup — no reference tree, no placement
+        runtime=5
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/asv/02_picrust_inference.py --in {input} --out {output}"
+
+
+rule taxon_sensitivity:
+    """Pseudocount & LOTO stability analysis for taxon ranking (v3).
+
+    Quantifies how robust the CLR-based fold-difference ranking is to:
+    (A) choice of pseudocount for zero-handling (8-10 values across 0.1–50.0)
+    (B) removal of any single taxon (191 LOTO jackknife iterations)
+
+    Outputs a confidence report that downstream ranking can use to weight
+    or flag taxa by stability tier (HIGH/MEDIUM/LOW)."""
+    input:
+        asv="data/raw/supplied/ASV_table_Jumpers_Laggards.GKAQUA.csv",
+        taxa_dir="data/processed/clr_profiles/taxa_direction.tsv",
+    output:
+        sweep="results/reports/pseudocount_sensitivity.tsv",
+        pseudo_metrics="results/reports/pseudocount_stability_metrics.tsv",
+        loto="results/reports/loto_stability.tsv",
+        confidence="results/reports/taxon_confidence_report.tsv",
+    params:
+        n_pseudocounts=8,
+        loto_pc=1.0,
+    resources:
+        mem_mb=1024,   # 191 taxa × ~200 iterations = trivial
+        runtime=10
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/asv/01b_sensitivity_analysis.py "
+        "--in {input.asv} --out-dir results/reports/ "
+        "--taxa-direction {input.taxa_dir} "
+        "--n-pseudocounts {params.n_pseudocounts} "
+        "--loto-pseudocount {params.loto_pc}"
+
+
+rule functional_profiles:
+    """Genome-resolved functional profiling of the pooled ASV taxa.
+
+    Replaces the curated genus→function map (02_picrust_inference.py) with
+    tool-derived KEGG GENOME pathway/KO indices: species → NCBI taxid →
+    KEGG GENOME → gene→KO / gene→pathway links → pool-level descriptive
+    indices. A literal PICRUSt2 run is impossible for this table (Data Note:
+    raw FASTQs not released; ASV column is species-level only).
+
+    Requires internet (NCBI E-utilities, KEGG REST; BioCyc optional). All
+    responses are cached under data/interim/literature_tables/api_cache/.
+    OPTIONAL target: `snakemake functional_profiles` (not in `all`)."""
+    input:
+        "data/raw/supplied/ASV_table_Jumpers_Laggards.GKAQUA.csv"
+    output:
+        pathways="data/interim/functional_prediction/kegg_out/pathway_abundance.tsv",
+        ko="data/interim/functional_prediction/kegg_out/ko_abundance.tsv",
+        mapping="data/interim/functional_prediction/kegg_out/taxon_genome_mapping.tsv",
+        final="data/processed/clr_profiles/pathway_abundance.tsv"
+    resources:
+        mem_mb=512,   # pure HTTP I/O — no reference DB in memory
+        runtime=30
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/asv/03_functional_profiles.py --asv {input} "
+        "--out-dir data/interim/functional_prediction "
+        "--final-dir data/processed/clr_profiles"
+
+
+rule functional_comparison:
+    """Agreement/divergence report: old hand-curated taxa_functions.tsv vs
+    new genome-resolved pathway profiles. Descriptive only."""
+    input:
+        old="data/processed/clr_profiles/taxa_functions.tsv",
+        new="data/processed/clr_profiles/pathway_abundance.tsv",
+        contrib="data/interim/functional_prediction/kegg_out/pathway_taxon_contribution.tsv",
+        mapping="data/interim/functional_prediction/kegg_out/taxon_genome_mapping.tsv"
+    output:
+        "results/reports/functional_map_comparison.tsv"
+    resources:
+        mem_mb=512,
+        runtime=5
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/asv/04_functional_map_comparison.py "
+        "--old {input.old} --new {input.new} --contrib {input.contrib} "
+        "--mapping {input.mapping} --out {output}"
+
+
+rule metacyc_mapping:
+    """EC indices -> MetaCyc pathway indices (BioCyc web services).
+
+    REQUIRES a BioCyc account: BIOCYC_USER / BIOCYC_PASSWORD (or USER /
+    PASSWORD) environment variables, e.g.
+        set -a; source ~/biocyc.env; set +a
+        snakemake metacyc_mapping
+    Credentials are used in-memory only and never written to disk.
+    ~2,100 EC queries at <=1 req/sec (~45-60 min, fully cached).
+    OPTIONAL target; not in `all`."""
+    input:
+        "data/interim/functional_prediction/kegg_out/ec_abundance.tsv"
+    output:
+        "data/interim/functional_prediction/metacyc_out/metacyc_pathway_abundance.tsv"
+    resources:
+        mem_mb=512,
+        runtime=120
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/asv/03c_metacyc_mapping.py --ec {input} "
+        "--out-dir data/interim/functional_prediction"
+
+
+# ================================================================
+# HOST LAYER (Approach 3) — Replicated RNA-seq with WGCNA
+# ================================================================
+
+rule fetch_sra_metadata:
+    """Fetch SRA RunInfo for PRJNA875278. No download — metadata only.
+    Writes a bare list of SRR IDs (one per line)."""
+    output:
+        "config/samples_prjna875278.tsv"
+    resources:
+        mem_mb=512,
+        runtime=5
+    shell:
+        "bash src/rnaseq/fetch_sra_metadata.sh {output}"
+
+
+# NOTE: data/raw/sra/PRJNA875278/metadata.tsv (SRR, BioSample, sex, tissue,
+# weight_gain, strain, stage, description) is CURATED BY HAND from the
+# BioSample records — SRA RunInfo does not carry weight_gain or tissue.
+# It is a workflow input, not a generated file. Do not add a rule for it.
+
+
+rule download_sra:
+    """Download SRA runs ONE at a time. See download_sra_safe.sh for safeguards.
+    The shipped run used process_all_samples.sh instead, which downloads,
+    trims, quantifies and then deletes the raw data per sample."""
+    input:
+        "config/samples_prjna875278.tsv"
+    output:
+        touch(SRA_DIR + "/.download_complete")
+    resources:
+        mem_mb=1024,   # prefetch/fasterq-dump are I/O bound, not CPU
+        runtime=1440   # 24 hours for 20 samples, serial
+    shell:
+        "bash src/rnaseq/download_sra_safe.sh {input} " + SRA_DIR
+
+
+rule fastqc_raw:
+    """FastQC on raw reads — one sample at a time (serial due to cores:1 profile).
+    Optional: reachable via `snakemake qc_all`, not part of `all`. The shipped
+    run relied on the per-sample fastp JSON reports instead."""
+    input:
+        r1=SRA_DIR + "/{sample}_1.fastq.gz",
+        r2=SRA_DIR + "/{sample}_2.fastq.gz"
+    output:
+        "results/logs/fastqc/{sample}_1_fastqc.html",
+        "results/logs/fastqc/{sample}_2_fastqc.html"
+    resources:
+        mem_mb=1024,
+        runtime=15
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "mkdir -p results/logs/fastqc && "
+        "fastqc -o results/logs/fastqc -t 2 {input.r1} {input.r2}"
+
+
+rule fastp_trim:
+    """Adapter trimming + quality filtering. Paired-end aware.
+    Trimmed reads land next to the raw reads (matching process_all_samples.sh)."""
+    input:
+        r1=SRA_DIR + "/{sample}_1.fastq.gz",
+        r2=SRA_DIR + "/{sample}_2.fastq.gz"
+    output:
+        r1=SRA_DIR + "/{sample}_trimmed_1.fastq.gz",
+        r2=SRA_DIR + "/{sample}_trimmed_2.fastq.gz",
+        json="results/logs/fastp/{sample}.json"
+    resources:
+        mem_mb=2048,   # fastp needs ~2 GB for paired-end
+        runtime=20
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "fastp -i {input.r1} -I {input.r2} "
+        "-o {output.r1} -O {output.r2} "
+        "--json {output.json} --thread 2 "
+        "--qualified_quality_phred 20 --length_required 50 "
+        "--detect_adapter_for_pe"
+
+
+rule salmon_index:
+    """Build the Salmon index ONCE — the most memory-intensive step (~6 GB).
+    Reference is the combined TSA (4,211 seqs) + mRNA (63,271 seqs) FASTA.
+
+    The output is info.json — a real file Salmon writes, recording k=31,
+    63,093 refs and salmon 2.4.1 for the index already on disk. Do NOT swap
+    this for a touch() sentinel: the index was built by process_all_samples.sh,
+    which creates no sentinel, so a missing one would make Snakemake propose a
+    6 GB / 60 min rebuild plus 20 re-quantifications."""
+    input:
+        "data/raw/references/M_rosenbergii_combined.fasta"
+    output:
+        "data/raw/references/salmon_index/info.json"
+    resources:
+        mem_mb=6144,   # CRITICAL: 6 GB — runs solo due to cores:1
+        runtime=60
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "mkdir -p results/logs && "
+        "salmon index -t {input} -i data/raw/references/salmon_index "
+        "-k 31 --threads 2 2>&1 | tee results/logs/salmon_index.log"
+
+
+rule salmon_quant:
+    """Pseudo-align with Salmon (selective alignment is the default in >=1.0,
+    so --validateMappings is not passed). Index built once above."""
+    input:
+        r1=SRA_DIR + "/{sample}_trimmed_1.fastq.gz",
+        r2=SRA_DIR + "/{sample}_trimmed_2.fastq.gz",
+        index="data/raw/references/salmon_index/info.json"
+    output:
+        "data/interim/host_counts/{sample}/quant.sf"
+    resources:
+        mem_mb=3072,   # Salmon quant uses ~3 GB
+        runtime=30
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "salmon quant -i data/raw/references/salmon_index "
+        "-l A -1 {input.r1} -2 {input.r2} "
+        "-o data/interim/host_counts/{wildcards.sample} "
+        "--threads 2 --gcBias --seqBias"
+
+
+rule merge_counts:
+    """Merge per-sample quant.sf into gene x sample TPM and count matrices.
+    Filters to genes with mean TPM >= 1 in >= 10 of 20 samples (18,276 genes).
+    Also emits metadata_aligned.tsv (metadata reordered to matrix columns)."""
+    input:
+        quants=expand("data/interim/host_counts/{sample}/quant.sf", sample=SAMPLES),
+        metadata=SRA_DIR + "/metadata.tsv"
+    output:
+        tpm="data/processed/gene_expression/merged_tpm.tsv",
+        counts="data/processed/gene_expression/merged_counts.tsv",
+        metadata="data/processed/gene_expression/metadata_aligned.tsv"
+    resources:
+        mem_mb=2048,   # Holds two ~63K x 20 float matrices in memory
+        runtime=15
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/rnaseq/merge_counts.py "
+        "--quant-dir data/interim/host_counts "
+        "--out-dir data/processed/gene_expression "
+        "--metadata {input.metadata} "
+        "--min-tpm 1.0 --min-samples 10"
+
+
+# ================================================================
+# LATENT-CONFOUND CORRECTION (v2 — Fix 3)
+# Remove sex/tissue-driven PCs BEFORE WGCNA
+# ================================================================
+
+rule correct_confounds:
+    """PCA-based removal of latent confounders (sex, tissue) before WGCNA.
+    Regresses out PCs correlated with confounders but not with weight_gain.
+    Output: corrected TPM matrix + diagnostic report."""
+    input:
+        tpm="data/processed/gene_expression/merged_tpm.tsv",
+        metadata=SRA_DIR + "/metadata.tsv"
+    output:
+        corrected="data/processed/gene_expression/corrected_tpm.tsv",
+        report="results/reports/confound_report.tsv"
+    resources:
+        mem_mb=4096,   # PCA + OLS regression on ~18K genes
+        runtime=30
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/confound_correction.py "
+        "--tpm {input.tpm} --metadata {input.metadata} "
+        "--trait weight_gain --confounds sex,tissue "
+        "--out {output.corrected} --out-report {output.report}"
+
+
+# ================================================================
+# WGCNA (Approach 3 core) — Memory-safe blockwise approach
+# ================================================================
+
+rule build_wgcna:
+    """Blockwise WGCNA to avoid OOM. Pre-filters low-count genes.
+    Produced the shipped 20-module / 1,792-hub-gene network (power=15, R^2=0.939).
+    NB: wgcna_modules.csv is TAB-separated despite the .csv extension —
+    downstream readers must use sep='\\t'."""
+    input:
+        counts="data/processed/gene_expression/merged_counts.tsv",
+        metadata=SRA_DIR + "/metadata.tsv"
+    output:
+        hub_genes="data/processed/wgcna/hub_genes.tsv",
+        modules="results/tables/wgcna_modules.csv",
+        eigengenes="data/processed/wgcna/me_matrix.tsv"
+    resources:
+        mem_mb=4096,   # Blockwise WGCNA uses ~4 GB
+        runtime=120
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "Rscript src/network/wgcna_analysis.R "
+        "--counts {input.counts} "
+        "--metadata {input.metadata} "
+        "--out-hub {output.hub_genes} "
+        "--out-modules {output.modules} "
+        "--out-me {output.eigengenes} "
+        "--max-block-size 8000 "
+        "--min-counts 10 "
+        "--threads 2"
+
+
+# ================================================================
+# WGCNA on CORRECTED expression (v2 — Fix 3)
+# Same parameters, different input → different output set
+# ================================================================
+
+rule build_wgcna_corrected:
+    """WGCNA on confound-corrected expression (residuals after sex/tissue PC
+    removal). Parallel output set for comparison.
+
+    NOT part of `all` — these outputs have never been generated; reach them
+    with `snakemake wgcna_corrected`. The *_sexadj.tsv / *_sexadj.csv files
+    sitting in data/processed/wgcna/ and results/tables/ are from the earlier
+    preliminary n=10 run and are NOT products of this rule.
+
+    Caveat: the input is TPM, not counts, so --min-counts 10 acts as a TPM
+    floor here rather than a count floor."""
+    input:
+        counts="data/processed/gene_expression/corrected_tpm.tsv",
+        metadata=SRA_DIR + "/metadata.tsv"
+    output:
+        hub_genes="data/processed/wgcna/hub_genes_corrected.tsv",
+        modules="results/tables/wgcna_modules_corrected.csv",
+        eigengenes="data/processed/wgcna/me_matrix_corrected.tsv"
+    resources:
+        mem_mb=4096,
+        runtime=120
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "Rscript src/network/wgcna_analysis.R "
+        "--counts {input.counts} "
+        "--metadata {input.metadata} "
+        "--out-hub {output.hub_genes} "
+        "--out-modules {output.modules} "
+        "--out-me {output.eigengenes} "
+        "--max-block-size 8000 "
+        "--min-counts 10 "
+        "--threads 2 "
+        "--corrected TRUE"
+
+
+# ================================================================
+# INTERNAL VALIDATION (v3 — Stability & Orthogonal Cross-Check)
+# ================================================================
+
+rule wgcna_bootstrap:
+    """Bootstrap module-trait stability.
+
+    Resamples n=20 with replacement (default 1000 iterations) using the
+    existing module eigengenes. Does NOT re-run WGCNA — fast and cheap.
+    Reports per-module: 95% CI on partial_r(WG|sex), top-5 rate,
+    sign-flip rate, and stability tier (HIGH/MEDIUM/LOW).
+
+    Key finding: NO module has a 95% CI excluding zero, even M6
+    (partial_r=-0.590, CI=[-0.847,+0.492]). Only M6/M8 reach MEDIUM
+    stability tier."""
+    input:
+        me="data/processed/wgcna/me_matrix.tsv",
+        metadata=SRA_DIR + "/metadata.tsv"
+    output:
+        bootstrap="results/reports/wgcna_bootstrap_stability.tsv",
+        summary="results/reports/wgcna_module_stability_summary.tsv"
+    params:
+        n_bootstrap=1000,
+        seed=42
+    resources:
+        mem_mb=1024,   # Bootstrap on 20 samples × 20 MEs — trivial
+        runtime=5
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/wgcna_bootstrap_stability.py "
+        "--me {input.me} --metadata {input.metadata} "
+        "--out-dir results/reports/ "
+        "--n-bootstrap {params.n_bootstrap} --seed {params.seed}"
+
+
+rule deseq2_validate:
+    """DESeq2 orthogonal cross-validation of WGCNA hub genes (v3.1).
+
+    FIXED: kME-aware sign convention, continuous WG model (n=20),
+    module-level eigengene LM test, tissue covariate added.
+    Tests whether the top 10 ranked WGCNA hub genes show concordant
+    direction of effect in a DESeq2 GLM (design = ~ sex + tissue + weight_gain).
+
+    Also validates at the module level via lm(ME ~ sex + tissue + WG)
+    for all 20 module eigengenes."""
+    input:
+        counts="data/processed/gene_expression/merged_counts.tsv",
+        metadata=SRA_DIR + "/metadata.tsv",
+        hub="results/shortlist/host_genes.csv",
+        me="data/processed/wgcna/me_matrix.tsv"
+    output:
+        cross_val="results/reports/deseq2_cross_validation.tsv",
+        module_lm="results/reports/deseq2_module_eigengene_test.tsv",
+        all_de="results/reports/deseq2_all_results.tsv"
+    resources:
+        mem_mb=4096,
+        runtime=30
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "Rscript src/rnaseq/deseq2_validation.R "
+        "--counts {input.counts} --metadata {input.metadata} "
+        "--hub-genes {input.hub} --me {input.me} "
+        "--out-dir results/reports/"
+
+
+# ================================================================
+# v3.2 — sPLS + Random Forest orthogonal validation
+# ================================================================
+
+rule spls_rf_validate:
+    """sPLS + Random Forest orthogonal gene validation (v3.2).
+
+    sPLS: Sparse PLS regression selects top genes that predict weight_gain
+    while controlling for sex/tissue. Compares selected set with WGCNA hubs.
+
+    Random Forest: Non-linear ensemble ranks all 18,276 genes by importance
+    for predicting weight_gain. Reports where WGCNA top-10 rank.
+
+    Key finding: Zero overlap between WGCNA top-10 and sPLS/RF top-50 —
+    co-expression structure ≠ predictive structure at n=20."""
+    input:
+        tpm="data/processed/gene_expression/merged_tpm.tsv",
+        metadata=SRA_DIR + "/metadata.tsv",
+        hub="results/shortlist/host_genes.csv",
+        modules="results/tables/wgcna_modules.csv"
+    output:
+        spls="results/reports/spls_gene_selection.tsv",
+        rf="results/reports/rf_gene_importance.tsv",
+        comparison="results/reports/spls_rf_wgcna_comparison.tsv"
+    resources:
+        mem_mb=4096,   # RF on 18K × 20 with 500 trees
+        runtime=15
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/spls_rf_validation.py "
+        "--tpm {input.tpm} --metadata {input.metadata} "
+        "--hub-genes {input.hub} --modules {input.modules} "
+        "--out-dir results/reports/"
+
+
+rule m6_annotate:
+    """M6 hub gene functional annotation via NCBI (v3.2).
+
+    Queries NCBI eutils for XM_ accession protein products and classifies
+    genes into functional categories (protein degradation, immune response,
+    stress response, etc.) to explain the negative M6-WG correlation.
+
+    NOTE: Requires internet access for NCBI queries. Rate-limited to
+    ~0.3 sec per gene (~22 sec for 72 genes). Skip if offline."""
+    input:
+        hub="data/processed/wgcna/hub_genes.tsv",
+        modules="results/tables/wgcna_modules.csv"
+    output:
+        annotations="results/reports/m6_gene_annotations.tsv",
+        summary="results/reports/m6_functional_summary.tsv"
+    resources:
+        mem_mb=512,
+        runtime=5
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/m6_gene_annotation.py "
+        "--hub-genes {input.hub} --modules {input.modules} "
+        "--out-dir results/reports/"
+
+
+rule m6_proteins:
+    """Build the prawn protein set for orthology mapping: RefSeq XM_ CDS via
+    NCBI efetch, EST/TSA translated via longest ORF. Requires internet;
+    responses cached under data/interim/literature_tables/api_cache/."""
+    input:
+        "data/processed/gene_expression/merged_counts.tsv"
+    output:
+        faa="data/interim/literature_tables/prawn_proteins.faa",
+        map="data/interim/literature_tables/prawn_gene_protein_map.tsv"
+    resources:
+        mem_mb=512,
+        runtime=30
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/fetch_prawn_proteins.py "
+        "--counts {input} --out-dir data/interim/literature_tables"
+
+
+rule m6_diamond:
+    """DIAMOND blastp of prawn proteins vs Swiss-Prot (best hit per query)."""
+    input:
+        "data/interim/literature_tables/prawn_proteins.faa"
+    output:
+        "data/interim/literature_tables/diamond_swissprot.tsv"
+    params:
+        db="data/raw/references/uniprot_sprot.dmnd",
+        fasta="data/raw/references/uniprot_sprot.fasta"
+    resources:
+        mem_mb=2048,   # small reference DB (~150 MB)
+        runtime=240
+    shell:
+        "test -f {params.db} || (mkdir -p data/raw/references && "
+        "curl -sL -A 'Mozilla/5.0 (research; track3_host_microbe)' "
+        "'https://ftp.uniprot.org/pub/databases/uniprot/current_release/"
+        "knowledgebase/complete/uniprot_sprot.fasta.gz' -o /tmp/uniprot_sprot.fasta.gz && "
+        "gunzip -c /tmp/uniprot_sprot.fasta.gz > {params.fasta} && "
+        "diamond makedb --in {params.fasta} -d {params.db}) && "
+        "diamond blastp -d {params.db} -q {input} -o {output} "
+        "--outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend "
+        "sstart send evalue bitscore --max-target-seqs 1 --evalue 1e-5 "
+        "--threads 4 --tmpdir /tmp"
+
+
+rule m6_uniprot_sets:
+    """Swiss-Prot best hits → KEGG / GO BP gene sets (UniProt REST + KEGG REST)."""
+    input:
+        "data/interim/literature_tables/diamond_swissprot.tsv"
+    output:
+        kegg="data/interim/literature_tables/uniprot_gene_sets_kegg.tsv",
+        go="data/interim/literature_tables/uniprot_gene_sets_go.tsv",
+        map="data/interim/literature_tables/prawn_gene_uniprot_map.tsv"
+    resources:
+        mem_mb=512,
+        runtime=30
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/map_uniprot_sets.py --diamond {input} "
+        "--out-dir data/interim/literature_tables"
+
+
+rule m6_gsea:
+    """Formal GSEA/ORA on the M6 module (clusterProfiler).
+
+    Ranked lists: (1) full-module kME vs ME6 recomputed in the WGCNA INPUT
+    SPACE (merged_counts.tsv, mean-counts>=10 — verified to reproduce the
+    stored M6 hub kME exactly), (2) DESeq2 signed WG statistic.
+    Gene sets: KEGG pathways + GO BP from Swiss-Prot orthology mapping.
+    OPTIONAL target: `snakemake m6_gsea`."""
+    input:
+        counts="data/processed/gene_expression/merged_counts.tsv",
+        me="data/processed/wgcna/me_matrix.tsv",
+        deseq2="results/reports/deseq2_all_results.tsv",
+        hubs="data/processed/wgcna/hub_genes.tsv",
+        kegg_sets="data/interim/literature_tables/uniprot_gene_sets_kegg.tsv",
+        go_sets="data/interim/literature_tables/uniprot_gene_sets_go.tsv"
+    output:
+        kegg_kme="results/reports/m6_gsea_kegg_kme.tsv",
+        kegg_deseq2="results/reports/m6_gsea_kegg_deseq2.tsv",
+        go_kme="results/reports/m6_gsea_go_kme.tsv",
+        go_deseq2="results/reports/m6_gsea_go_deseq2.tsv",
+        ora_kegg="results/reports/m6_ora_hubs_kegg.tsv",
+        ora_go="results/reports/m6_ora_hubs_go.tsv"
+    resources:
+        mem_mb=2048,   # clusterprofiler budget per project_config
+        runtime=60
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "Rscript src/network/m6_gsea.R"
+
+
+# ================================================================
+# INTEGRATION — Bridge layers by biological reasoning only
+# ================================================================
+
+rule build_network_edges:
+    """Build typed edge table: microbial function ↔ host pathway.
+    NO cross-layer covariance — only phenotype concordance, function overlap, literature.
+
+    --exclude-contaminants IS REQUIRED — do not drop it. config/contaminant_genera.txt
+    flags Pseudomonas as a ubiquitous extraction-kit reagent contaminant, and the
+    genus carries 39 species in this ASV table. Without the flag they contribute
+    117 of 126 surviving edges and hijack the pathway ranking (edge_count is not
+    genus-deduplicated), displacing the chitin→amino-sugar bridge with
+    protein digestion / aminoacyl-tRNA / BCAA degradation. With the flag, edge
+    building yields 57 predicted_function_overlap edges, matching the published
+    methods."""
+    input:
+        taxa="data/processed/clr_profiles/taxa_functions.tsv",
+        genes="data/processed/wgcna/hub_genes.tsv"
+    output:
+        "results/shortlist/network_edges.csv"
+    resources:
+        mem_mb=1024,
+        runtime=10
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/network/build_edges.py --taxa {input.taxa} --genes {input.genes} "
+        "--out {output} --exclude-contaminants"
+
+
+# ================================================================
+# SHORTLIST GENERATION
+# ================================================================
+
+rule generate_shortlists:
+    """Final ranked submission tables (the ones in docs/FINAL_REPORT.md).
+
+    src/ranking/generate_final_shortlists.py takes NO CLI arguments — it
+    derives BASE from its own file location (Path(__file__).resolve().parents[2])
+    and reads/writes paths relative to the repo root. The input/output lists
+    below mirror those paths so the DAG is correct; they are not passed to the
+    script.
+
+    It also REWRITES results/shortlist/network_edges.csv in place, filtering
+    the full edge set down to the ranked candidates (39 edges). That file is
+    therefore listed as an input here, not an output — listing it as both
+    would be a cycle.
+
+    (src/ranking/fill_shortlists.py is the older, argument-driven generator.
+    It did not produce the shipped tables, it has no --template option despite
+    its docstring, and docs/track3_shortlists_TEMPLATE.xlsx does not exist.)"""
+    input:
+        edges="results/shortlist/network_edges.csv",
+        taxa="data/processed/clr_profiles/taxa_direction.tsv",
+        hub="data/processed/wgcna/hub_genes.tsv",
+        modules="results/tables/wgcna_modules.csv",
+        eigengenes="data/processed/wgcna/me_matrix.tsv",
+        metadata=SRA_DIR + "/metadata.tsv",
+        taxon_conf="results/reports/taxon_confidence_report.tsv",
+        wgcna_stab="results/reports/wgcna_module_stability_summary.tsv",
+        deseq2_mod="results/reports/deseq2_module_eigengene_test.tsv"
+    output:
+        host="results/shortlist/host_genes.csv",
+        microbial="results/shortlist/microbial_taxa.csv",
+        pathways="results/shortlist/pathways.csv",
+        methodology="results/shortlist/ranking_methodology.md"
+    resources:
+        mem_mb=1024,
+        runtime=10
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/ranking/generate_final_shortlists.py"
+
+
+rule generate_figures:
+    """Publication figures (results/figures/cnsplots/fig1..fig8 .svg).
+
+    Also argument-free, deriving BASE from its own file location the same
+    way as generate_final_shortlists.py. NOT part of `all`: it imports
+    `cnsplots`, which is not declared in environment/conda_environment.yml
+    — install it in the active env first, then `snakemake figures`."""
+    input:
+        eigengenes="data/processed/wgcna/me_matrix.tsv",
+        metadata=SRA_DIR + "/metadata.tsv",
+        host="results/shortlist/host_genes.csv",
+        microbial="results/shortlist/microbial_taxa.csv",
+        pathways="results/shortlist/pathways.csv",
+        edges="results/shortlist/network_edges.csv",
+        taxa="data/processed/clr_profiles/taxa_direction.tsv",
+        confound="results/reports/confound_report.tsv"
+    output:
+        "results/figures/cnsplots/fig1_module_trait_heatmap.svg",
+        "results/figures/cnsplots/fig2_ranked_host_genes.svg",
+        "results/figures/cnsplots/fig3_ranked_microbial_taxa.svg",
+        "results/figures/cnsplots/fig4_integration_flow.svg",
+        "results/figures/cnsplots/fig5_contamination_scores.svg",
+        "results/figures/cnsplots/fig6_confound_analysis.svg",
+        "results/figures/cnsplots/fig7_correction_impact.svg",
+        "results/figures/cnsplots/fig8_multipanel_summary.svg"
+    resources:
+        mem_mb=2048,
+        runtime=15
+    conda:
+        "../environment/conda_environment.yml"
+    shell:
+        "python src/ranking/generate_cnsplots.py"

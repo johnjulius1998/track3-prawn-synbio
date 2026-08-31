@@ -1,0 +1,27 @@
+# config/contaminant_genera.txt
+# Suspected contaminant/reagent genera in aquatic microbiome studies.
+# These taxa receive extra scrutiny during ASV processing.
+# Based on: Salter et al. 2014 (BMC Biology), Eisenhofer et al. 2019 (Trends in Microbiology)
+#
+# One genus per line. Lines starting with # are comments.
+# Flags: [SKIN]=skin-associated, [REAGENT]=common reagent contaminant, [ENV]=environmental
+
+# Common reagent contaminants
+Pseudomonas     # [REAGENT] Ubiquitous in extraction kits
+Acinetobacter   # [REAGENT] Common in negative controls
+Stenotrophomonas # [REAGENT] Kit-associated
+Burkholderia    # [REAGENT] Water/kit contaminant
+Ralstonia       # [REAGENT] Known lab contaminant
+Sphingomonas    # [REAGENT] Common in PCR reagents
+Bradyrhizobium  # [REAGENT] Soil/kit cross-contamination
+Methylobacterium # [REAGENT] Common in DNA extraction kits
+
+# Skin/environmental (may not be true gut residents in prawns)
+Staphylococcus  # [SKIN] Possible surface contaminant
+Corynebacterium # [SKIN] Common skin commensal
+Propionibacterium # [SKIN] Skin-associated
+Micrococcus     # [SKIN] Environmental/skin
+
+# Aquatic free-living (may be from water column, not gut)
+Flavobacterium  # [ENV] Common in freshwater
+Limnohabitans   # [ENV] Freshwater bacterioplankton

@@ -1,0 +1,59 @@
+# config/project_config.yaml
+# Track 3 Host-Microbe Integration — Resource-Aware Configuration
+
+project:
+  name: "Track 3 Host-Microbe Integration"
+  organism: "Macrobrachium rosenbergii"
+
+# ============================================================
+# RESOURCE GUARDRAILS (WSL/Ubuntu — 7.7 GB RAM, 2 GB swap)
+# These limits prevent OOM crashes on resource-constrained systems.
+# ============================================================
+resources:
+  system:
+    total_ram_gb: 7.7
+    swap_gb: 2.0
+    cpu_cores: 12
+    # Minimum free RAM (GB) required before starting any job
+    min_free_ram_gb: 2.0
+    # Maximum RAM (GB) any single job is allowed to use
+    max_per_job_ram_gb: 4.0
+    # Maximum concurrent local jobs (CRITICAL: keep at 1 for this system)
+    max_concurrent_jobs: 1
+    # Disk space warning threshold (GB free)
+    min_free_disk_gb: 10.0
+
+  # Per-tool memory budgets (GB) — enforced by Snakemake resources
+  tool_budgets:
+    fastqc:           1.0
+    fastp:            2.0
+    salmon_index:     6.0    # Most memory-intensive; runs once
+    salmon_quant:     3.0
+    picrust2:         2.0
+    wgcna_blockwise:  4.0
+    clusterprofiler:  2.0
+
+datasets:
+  microbiome:
+    type: "pooled_asv"
+    file: "data/raw/supplied/ASV_table_Jumpers_Laggards.GKAQUA.csv"
+    n_replicates: 1
+    allowed_methods: ["clr", "presence_absence", "taxonomic_functional_inference",
+                      "genome_resolved_functional_profiling"]
+
+  host:
+    type: "rnaseq"
+    bioproject: "PRJNA875278"
+    n_replicates: 20
+    tissues: ["hepatopancreas", "gonad"]
+    covariate: "weight_gain"
+    allowed_methods: ["deseq2", "wgcna", "clusterprofiler"]
+
+integration_rules:
+  allowed_edge_types:
+    - "phenotype_concordance"
+    - "predicted_function_overlap"
+    - "curated_literature_interaction"
+  forbidden_edge_types:
+    - "cross_layer_covariance"
+    - "microbial_co_occurrence"

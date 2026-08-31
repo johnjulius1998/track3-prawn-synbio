@@ -1,0 +1,52 @@
+# Snakemake profile: workflow/profiles/local/config.yaml
+# GUARDRAILED for WSL/Ubuntu with 7.7 GB RAM, 2 GB swap
+#
+# Usage — from the REPO ROOT, with the analysis env active:
+#   conda activate track3_prawn
+#   snakemake --profile workflow/profiles/local
+#
+# Targets Snakemake >= 8. Keys removed from that release (notably `cluster:`,
+# which is now an executor plugin) will abort the run, so do not re-add them.
+
+# ---- CRITICAL: Prevent OOM crashes ----
+# One job at a time. With 7.7 GB RAM total and RNA-seq tools needing
+# 2-6 GB each, any parallelism will trigger the OOM killer.
+cores: 1
+jobs: 1
+
+# Retry a failed job once — transient network timeouts during SRA download,
+# or an OOM SIGKILL (exit code 137).
+# NB: --retries and --restart-times are two spellings of the SAME option.
+# Declaring both (as this file used to) is contradictory — keep only this one.
+retries: 1
+
+# Keep going if a job fails — don't tear down the whole DAG
+keep-going: true
+
+# Fallbacks for rules that omit a resource. Every rule in the Snakefile
+# declares mem_mb explicitly, so these should rarely apply.
+default-resources:
+  - mem_mb=1024
+  - runtime=60
+  - disk_mb=1000
+
+# Re-run jobs whose outputs were left INCOMPLETE by an interrupted run.
+# (This is not a "skip work that already exists" switch — Snakemake decides
+# that from file timestamps.)
+rerun-incomplete: true
+
+# Print shell commands for debugging
+printshellcmds: true
+
+# Filesystem latency tolerance before an output is declared missing
+latency-wait: 10
+
+# ---- Software deployment: deliberately NOT set here ----
+# Every rule carries a conda: directive, but materialising those envs from
+# environment/conda_environment.yml pulls R, Bioconductor and Salmon (~4-6 GB
+# by that file's own estimate), and mamba is not installed on this machine.
+# The shipped analysis ran inside the pre-built track3_prawn env, so the
+# default path assumes that env is active.
+#
+# To build and use the per-rule conda envs instead:
+#   snakemake --profile workflow/profiles/local --software-deployment-method conda

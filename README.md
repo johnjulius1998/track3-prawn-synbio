@@ -211,6 +211,13 @@ The internal validation tells us **exactly which findings to prioritize** for ex
 │   └── contaminant_genera.txt # Known-contaminant genus list used by the ASV filtering step
 ├── environment/
 │   └── conda_environment.yml  # Conda env spec (name: track3_prawn)
+├── environment.yml             # top-level copy, for one-command setup
+├── report/
+│   ├── report.pdf              # the 10-page submission report (rendered 8 pages)
+│   └── report_submission.md    # its Markdown source
+├── docs/
+│   ├── WETLAB_VALIDATION_PLAN.md  # executable validation plan (GK Aqua R&D)
+│   └── VALIDATION_ANALYSIS.md     # the 13-layer validation stack, in full
 ├── src/
 │   ├── asv/                   # CLR transform, taxon sensitivity, functional profiling, MetaCyc mapping
 │   ├── network/                # WGCNA, confound correction, bootstrap/permutation/causal validation, edge building
@@ -235,7 +242,7 @@ See [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md) for what raw/intermediate data 
 ## Reproducibility
 
 ```bash
-conda env create -f environment/conda_environment.yml
+conda env create -f environment.yml   # identical to environment/conda_environment.yml
 conda activate track3_prawn
 snakemake --profile workflow/profiles/local
 ```

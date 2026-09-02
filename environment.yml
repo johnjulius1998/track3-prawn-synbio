@@ -1,0 +1,88 @@
+name: track3_prawn
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # --- Core Python ---
+  - python=3.11
+  - pip
+  - pandas>=2.0
+  - numpy>=1.24
+  - scipy>=1.10
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - jupyterlab
+  - ipykernel
+
+  # --- Microbiome / Compositional ---
+  - scikit-bio>=0.5
+  - biom-format
+
+  # --- Network & Systems ---
+  - networkx>=3.1
+
+  # --- File I/O ---
+  - openpyxl>=3.1
+  - pyyaml>=6.0
+
+  # --- NCBI / SRA access ---
+  - entrez-direct>=16.2
+  - sra-tools>=3.0
+
+  # --- RNA-seq QC & Quant ---
+  - fastqc>=0.12
+  - fastp>=0.23
+  - salmon>=1.10
+  - multiqc>=1.14
+
+  # --- R core (for DESeq2, WGCNA, clusterProfiler) ---
+  - r-base>=4.3
+  - r-essentials
+  - r-devtools
+  - r-tidyverse
+  - r-ggpubr
+  - bioconductor-deseq2
+  - bioconductor-edger
+  - bioconductor-limma
+  - bioconductor-tximport
+  - r-wgcna                    # WGCNA from conda-forge (not bioconductor)
+  - bioconductor-clusterprofiler
+  - bioconductor-org.hs.eg.db
+  - r-optparse                 # CLI argument parsing for R scripts
+
+  # --- Parallel compression (for SRA FASTQ) ---
+  - pigz
+
+  # --- Functional profiling / orthology (03_functional_profiles.py, m6 GSEA) ---
+  - diamond>=2.1       # blastp of prawn proteins vs Swiss-Prot
+  - bioconductor-fgsea
+
+  # --- Workflow engine ---
+  # Requires Python >= 3.11. Profile at workflow/profiles/local targets v8+.
+  - snakemake>=9.0
+
+# ================================================================
+# GUARDRAIL NOTES:
+# - This env targets ~4-6 GB disk for packages.
+# - Python 3.11 chosen over 3.12 for bioconductor compatibility.
+# - Install with Mamba for speed: mamba env create -f this_file.yml
+# - Activate with: conda activate track3_prawn
+# - After activation, run: bash src/utils/preflight_check.sh
+# ================================================================
+  - bioconductor-annotationdbi
+  - bioconductor-go.db
+  - r-wgcna
+  - r-dynamictreecut
+  - r-flashclust
+  - r-ggplot2
+  - r-reshape2
+  - r-pheatmap
+  - r-rcpp
+  - r-rcppeigen
+
+  # --- PIP fallbacks for packages not in conda ---
+  - pip:
+    - mygene>=3.2
+    - goatools>=1.4
+    - pypdf>=4.0      # Data Note / brief PDF text extraction

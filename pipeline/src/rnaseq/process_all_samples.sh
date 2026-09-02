@@ -49,7 +49,7 @@ check_ram() {
 
 # ---- Pre-flight ----
 log "=== Pre-flight check ==="
-bash src/utils/preflight_check.sh || { err "Pre-flight failed"; exit 1; }
+bash pipeline/src/utils/preflight_check.sh || { err "Pre-flight failed"; exit 1; }
 
 mkdir -p "$SRA_DIR" "$QUANT_DIR" "$FASTP_DIR"
 

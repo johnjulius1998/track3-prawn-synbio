@@ -1,9 +1,9 @@
-# Snakemake profile: workflow/profiles/local/config.yaml
+# Snakemake profile: pipeline/profiles/local/config.yaml
 # GUARDRAILED for WSL/Ubuntu with 7.7 GB RAM, 2 GB swap
 #
 # Usage — from the REPO ROOT, with the analysis env active:
 #   conda activate track3_prawn
-#   snakemake --profile workflow/profiles/local
+#   snakemake -s pipeline/Snakefile --profile pipeline/profiles/local
 #
 # Targets Snakemake >= 8. Keys removed from that release (notably `cluster:`,
 # which is now an executor plugin) will abort the run, so do not re-add them.
@@ -49,4 +49,4 @@ latency-wait: 10
 # default path assumes that env is active.
 #
 # To build and use the per-rule conda envs instead:
-#   snakemake --profile workflow/profiles/local --software-deployment-method conda
+#   snakemake -s pipeline/Snakefile --profile pipeline/profiles/local --software-deployment-method conda

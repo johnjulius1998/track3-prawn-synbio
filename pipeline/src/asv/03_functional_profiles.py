@@ -285,7 +285,7 @@ def main():
                     default="data/interim/literature_tables/api_cache")
     args = ap.parse_args()
 
-    base = Path(__file__).resolve().parents[2]
+    base = Path(__file__).resolve().parents[3]
     asv_path = Path(args.asv)
     out_dir = Path(args.out_dir)
     final_dir = Path(args.final_dir)

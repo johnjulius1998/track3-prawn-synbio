@@ -54,7 +54,7 @@ def main():
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
-    base = Path(__file__).resolve().parents[2]
+    base = Path(__file__).resolve().parents[3]
     old = pd.read_csv(Path(args.old) if Path(args.old).is_absolute() else base / args.old, sep="\t")
     new = pd.read_csv(Path(args.new) if Path(args.new).is_absolute() else base / args.new, sep="\t")
     contrib = pd.read_csv(Path(args.contrib) if Path(args.contrib).is_absolute() else base / args.contrib, sep="\t")

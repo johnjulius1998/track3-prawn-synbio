@@ -52,13 +52,13 @@ This document presents five validation analyses designed to address these gaps a
 
 | Analysis | Script | Methods Tested | Output |
 |----------|--------|---------------|--------|
-| Pseudocount sweep | `src/asv/01b_sensitivity_analysis.py` | 11 CLR variants | `pseudocount_sensitivity.tsv` |
-| LOTO jackknife | `src/asv/01b_sensitivity_analysis.py` | 191 iterations | `loto_stability.tsv` |
-| Bootstrap WGCNA | `src/network/wgcna_bootstrap_stability.py` | 1,000 resamples | `wgcna_bootstrap_stability.tsv` |
-| DESeq2 per-gene | `src/rnaseq/deseq2_validation.R` | design=~sex+tissue+WG, n=20 | `deseq2_cross_validation.tsv` |
-| DESeq2 module LM | `src/rnaseq/deseq2_validation.R` | lm(ME~sex+tissue+WG), 20 modules | `deseq2_module_eigengene_test.tsv` |
+| Pseudocount sweep | `pipeline/src/asv/01b_sensitivity_analysis.py` | 11 CLR variants | `pseudocount_sensitivity.tsv` |
+| LOTO jackknife | `pipeline/src/asv/01b_sensitivity_analysis.py` | 191 iterations | `loto_stability.tsv` |
+| Bootstrap WGCNA | `pipeline/src/network/wgcna_bootstrap_stability.py` | 1,000 resamples | `wgcna_bootstrap_stability.tsv` |
+| DESeq2 per-gene | `pipeline/src/rnaseq/deseq2_validation.R` | design=~sex+tissue+WG, n=20 | `deseq2_cross_validation.tsv` |
+| DESeq2 module LM | `pipeline/src/rnaseq/deseq2_validation.R` | lm(ME~sex+tissue+WG), 20 modules | `deseq2_module_eigengene_test.tsv` |
 
-The stability outputs are consumed by `src/ranking/generate_final_shortlists.py` to produce stability-weighted ranking scores. The full pipeline is orchestrated by `workflow/Snakefile` (rules: `taxon_sensitivity`, `wgcna_bootstrap`, `deseq2_validate`, `generate_shortlists`).
+The stability outputs are consumed by `pipeline/src/ranking/generate_final_shortlists.py` to produce stability-weighted ranking scores. The full pipeline is orchestrated by `pipeline/Snakefile` (rules: `taxon_sensitivity`, `wgcna_bootstrap`, `deseq2_validate`, `generate_shortlists`).
 
 ---
 
@@ -575,21 +575,21 @@ The thirteen validation analyses now form a complete evidence chain:
 
 | Script | Purpose |
 |--------|---------|
-| `src/asv/01b_sensitivity_analysis.py` | Pseudocount sweep + LOTO jackknife |
-| `src/asv/01c_bayesian_taxon_model.py` | Bayesian Dirichlet-multinomial taxon enrichment |
-| `src/network/wgcna_bootstrap_stability.py` | Bootstrap WGCNA module-trait stability |
-| `src/network/permutation_power_analysis.py` | Permutation null + power analysis |
-| `src/network/tornado_sensitivity.py` | WGCNA parameter sensitivity / tornado plot |
-| `src/network/causal_dag.R` | Causal DAG + conditional independence tests |
-| `src/network/m6_gene_annotation.py` | M6 hub gene NCBI annotation |
-| `src/network/spls_rf_validation.py` | sPLS + Random Forest orthogonal validation |
-| `src/rnaseq/deseq2_validation.R` | DESeq2 per-gene + module LM cross-validation |
-| `src/asv/03_functional_profiles.py` | Genome-resolved functional profiling: species→NCBI taxid→KEGG GENOME→KO/pathway/EC pool indices |
-| `src/asv/03c_metacyc_mapping.py` | EC indices → MetaCyc pathway indices (authenticated BioCyc session) |
-| `src/asv/04_functional_map_comparison.py` | Curated map vs tool-derived profiles cross-check |
-| `src/network/fetch_prawn_proteins.py` | Prawn protein set (RefSeq CDS + longest-ORF translation) |
-| `src/network/map_uniprot_sets.py` | Swiss-Prot best hits → KEGG/GO gene sets |
-| `src/network/m6_gsea.R` | clusterProfiler GSEA/ORA on M6 (kME + DESeq2 rankings) |
+| `pipeline/src/asv/01b_sensitivity_analysis.py` | Pseudocount sweep + LOTO jackknife |
+| `pipeline/src/asv/01c_bayesian_taxon_model.py` | Bayesian Dirichlet-multinomial taxon enrichment |
+| `pipeline/src/network/wgcna_bootstrap_stability.py` | Bootstrap WGCNA module-trait stability |
+| `pipeline/src/network/permutation_power_analysis.py` | Permutation null + power analysis |
+| `pipeline/src/network/tornado_sensitivity.py` | WGCNA parameter sensitivity / tornado plot |
+| `pipeline/src/network/causal_dag.R` | Causal DAG + conditional independence tests |
+| `pipeline/src/network/m6_gene_annotation.py` | M6 hub gene NCBI annotation |
+| `pipeline/src/network/spls_rf_validation.py` | sPLS + Random Forest orthogonal validation |
+| `pipeline/src/rnaseq/deseq2_validation.R` | DESeq2 per-gene + module LM cross-validation |
+| `pipeline/src/asv/03_functional_profiles.py` | Genome-resolved functional profiling: species→NCBI taxid→KEGG GENOME→KO/pathway/EC pool indices |
+| `pipeline/src/asv/03c_metacyc_mapping.py` | EC indices → MetaCyc pathway indices (authenticated BioCyc session) |
+| `pipeline/src/asv/04_functional_map_comparison.py` | Curated map vs tool-derived profiles cross-check |
+| `pipeline/src/network/fetch_prawn_proteins.py` | Prawn protein set (RefSeq CDS + longest-ORF translation) |
+| `pipeline/src/network/map_uniprot_sets.py` | Swiss-Prot best hits → KEGG/GO gene sets |
+| `pipeline/src/network/m6_gsea.R` | clusterProfiler GSEA/ORA on M6 (kME + DESeq2 rankings) |
 
 ### Key Outputs
 
@@ -620,8 +620,8 @@ The thirteen validation analyses now form a complete evidence chain:
 
 | Script | Changes |
 |--------|---------|
-| `src/ranking/generate_final_shortlists.py` | Loads stability reports; incorporates stability bonuses/penalties into ranking formula |
-| `workflow/Snakefile` | 3 new rules (`taxon_sensitivity`, `wgcna_bootstrap`, `deseq2_validate`); updated `all` target and dependencies |
+| `pipeline/src/ranking/generate_final_shortlists.py` | Loads stability reports; incorporates stability bonuses/penalties into ranking formula |
+| `pipeline/Snakefile` | 3 new rules (`taxon_sensitivity`, `wgcna_bootstrap`, `deseq2_validate`); updated `all` target and dependencies |
 
 ### New Outputs
 

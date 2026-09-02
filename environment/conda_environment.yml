@@ -59,7 +59,7 @@ dependencies:
   - bioconductor-fgsea
 
   # --- Workflow engine ---
-  # Requires Python >= 3.11. Profile at workflow/profiles/local targets v8+.
+  # Requires Python >= 3.11. Profile at pipeline/profiles/local targets v8+.
   - snakemake>=9.0
 
 # ================================================================
@@ -68,7 +68,7 @@ dependencies:
 # - Python 3.11 chosen over 3.12 for bioconductor compatibility.
 # - Install with Mamba for speed: mamba env create -f this_file.yml
 # - Activate with: conda activate track3_prawn
-# - After activation, run: bash src/utils/preflight_check.sh
+# - After activation, run: bash pipeline/src/utils/preflight_check.sh
 # ================================================================
   - bioconductor-annotationdbi
   - bioconductor-go.db

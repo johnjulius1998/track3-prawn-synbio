@@ -98,7 +98,7 @@ check_disk
 # Read sample list
 if [ ! -f "$SAMPLE_LIST" ]; then
     log_error "Sample list not found: ${SAMPLE_LIST}"
-    log_info "Run metadata fetch first: bash src/rnaseq/fetch_sra_metadata.sh"
+    log_info "Run metadata fetch first: bash pipeline/src/rnaseq/fetch_sra_metadata.sh"
     exit 1
 fi
 

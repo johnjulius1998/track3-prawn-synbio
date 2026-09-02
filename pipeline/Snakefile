@@ -4,24 +4,24 @@
 #
 # CRITICAL RULES:
 #   1. All rules declare mem_mb — NEVER omit this.
-#   2. Run from the REPO ROOT with: snakemake --profile workflow/profiles/local
-#   3. Pre-flight check: bash src/utils/preflight_check.sh
+#   2. Run from the REPO ROOT with: snakemake -s pipeline/Snakefile --profile pipeline/profiles/local
+#   3. Pre-flight check: bash pipeline/src/utils/preflight_check.sh
 #
 # PATH SEMANTICS (do not "simplify" these):
 #   - configfile:/input:/output:/shell: paths are relative to the WORKING
 #     DIRECTORY (repo root).
-#   - conda: paths are relative to THIS FILE (workflow/), hence the "../".
+#   - conda: paths are relative to THIS FILE (pipeline/), hence the "../".
 #
 # PROVENANCE NOTE — how the shipped results were actually produced:
 #   The 20 PRJNA875278 samples were run through
-#   src/rnaseq/process_all_samples.sh (a serial download → fastp → salmon
+#   pipeline/src/rnaseq/process_all_samples.sh (a serial download → fastp → salmon
 #   driver with RAM/disk guards), NOT through the per-sample rules below.
 #   The rules encode the same commands and file layout so the DAG is
 #   reproducible, but re-running them will re-download raw data that the
 #   batch script has already deleted to save disk.
 # ================================================================
 
-configfile: "config/project_config.yaml"
+configfile: "pipeline/config/project_config.yaml"
 
 SRA_DIR = "data/raw/sra/PRJNA875278"
 SAMPLE_SHEET = SRA_DIR + "/samples_corrected.tsv"
@@ -79,14 +79,14 @@ rule process_asv_clr:
         "data/processed/clr_profiles/taxa_direction.tsv"
     params:
         min_reads=100,
-        contaminant_list="config/contaminant_genera.txt"
+        contaminant_list="pipeline/config/contaminant_genera.txt"
     resources:
         mem_mb=1024,   # Lightweight — only 191 taxa
         runtime=5
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/asv/01_clr_transform.py --in {input} --out {output} "
+        "python pipeline/src/asv/01_clr_transform.py --in {input} --out {output} "
         "--min-reads {params.min_reads} --contaminants {params.contaminant_list}"
 
 
@@ -94,7 +94,7 @@ rule predict_functions:
     """Functional annotation of ASV taxa.
 
     NOT a PICRUSt2 run — the supplied ASV table has genus names only, no 16S
-    sequences, so src/asv/02_picrust_inference.py uses a curated genus→function
+    sequences, so pipeline/src/asv/02_picrust_inference.py uses a curated genus→function
     literature map and tags every call with its evidence basis. Cheap and fast;
     the script name is historical."""
     input:
@@ -107,7 +107,7 @@ rule predict_functions:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/asv/02_picrust_inference.py --in {input} --out {output}"
+        "python pipeline/src/asv/02_picrust_inference.py --in {input} --out {output}"
 
 
 rule taxon_sensitivity:
@@ -136,7 +136,7 @@ rule taxon_sensitivity:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/asv/01b_sensitivity_analysis.py "
+        "python pipeline/src/asv/01b_sensitivity_analysis.py "
         "--in {input.asv} --out-dir results/reports/ "
         "--taxa-direction {input.taxa_dir} "
         "--n-pseudocounts {params.n_pseudocounts} "
@@ -168,7 +168,7 @@ rule functional_profiles:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/asv/03_functional_profiles.py --asv {input} "
+        "python pipeline/src/asv/03_functional_profiles.py --asv {input} "
         "--out-dir data/interim/functional_prediction "
         "--final-dir data/processed/clr_profiles"
 
@@ -189,7 +189,7 @@ rule functional_comparison:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/asv/04_functional_map_comparison.py "
+        "python pipeline/src/asv/04_functional_map_comparison.py "
         "--old {input.old} --new {input.new} --contrib {input.contrib} "
         "--mapping {input.mapping} --out {output}"
 
@@ -214,7 +214,7 @@ rule metacyc_mapping:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/asv/03c_metacyc_mapping.py --ec {input} "
+        "python pipeline/src/asv/03c_metacyc_mapping.py --ec {input} "
         "--out-dir data/interim/functional_prediction"
 
 
@@ -226,12 +226,12 @@ rule fetch_sra_metadata:
     """Fetch SRA RunInfo for PRJNA875278. No download — metadata only.
     Writes a bare list of SRR IDs (one per line)."""
     output:
-        "config/samples_prjna875278.tsv"
+        "pipeline/config/samples_prjna875278.tsv"
     resources:
         mem_mb=512,
         runtime=5
     shell:
-        "bash src/rnaseq/fetch_sra_metadata.sh {output}"
+        "bash pipeline/src/rnaseq/fetch_sra_metadata.sh {output}"
 
 
 # NOTE: data/raw/sra/PRJNA875278/metadata.tsv (SRR, BioSample, sex, tissue,
@@ -245,14 +245,14 @@ rule download_sra:
     The shipped run used process_all_samples.sh instead, which downloads,
     trims, quantifies and then deletes the raw data per sample."""
     input:
-        "config/samples_prjna875278.tsv"
+        "pipeline/config/samples_prjna875278.tsv"
     output:
         touch(SRA_DIR + "/.download_complete")
     resources:
         mem_mb=1024,   # prefetch/fasterq-dump are I/O bound, not CPU
         runtime=1440   # 24 hours for 20 samples, serial
     shell:
-        "bash src/rnaseq/download_sra_safe.sh {input} " + SRA_DIR
+        "bash pipeline/src/rnaseq/download_sra_safe.sh {input} " + SRA_DIR
 
 
 rule fastqc_raw:
@@ -360,7 +360,7 @@ rule merge_counts:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/rnaseq/merge_counts.py "
+        "python pipeline/src/rnaseq/merge_counts.py "
         "--quant-dir data/interim/host_counts "
         "--out-dir data/processed/gene_expression "
         "--metadata {input.metadata} "
@@ -388,7 +388,7 @@ rule correct_confounds:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/confound_correction.py "
+        "python pipeline/src/network/confound_correction.py "
         "--tpm {input.tpm} --metadata {input.metadata} "
         "--trait weight_gain --confounds sex,tissue "
         "--out {output.corrected} --out-report {output.report}"
@@ -416,7 +416,7 @@ rule build_wgcna:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "Rscript src/network/wgcna_analysis.R "
+        "Rscript pipeline/src/network/wgcna_analysis.R "
         "--counts {input.counts} "
         "--metadata {input.metadata} "
         "--out-hub {output.hub_genes} "
@@ -456,7 +456,7 @@ rule build_wgcna_corrected:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "Rscript src/network/wgcna_analysis.R "
+        "Rscript pipeline/src/network/wgcna_analysis.R "
         "--counts {input.counts} "
         "--metadata {input.metadata} "
         "--out-hub {output.hub_genes} "
@@ -498,7 +498,7 @@ rule wgcna_bootstrap:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/wgcna_bootstrap_stability.py "
+        "python pipeline/src/network/wgcna_bootstrap_stability.py "
         "--me {input.me} --metadata {input.metadata} "
         "--out-dir results/reports/ "
         "--n-bootstrap {params.n_bootstrap} --seed {params.seed}"
@@ -529,7 +529,7 @@ rule deseq2_validate:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "Rscript src/rnaseq/deseq2_validation.R "
+        "Rscript pipeline/src/rnaseq/deseq2_validation.R "
         "--counts {input.counts} --metadata {input.metadata} "
         "--hub-genes {input.hub} --me {input.me} "
         "--out-dir results/reports/"
@@ -565,7 +565,7 @@ rule spls_rf_validate:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/spls_rf_validation.py "
+        "python pipeline/src/network/spls_rf_validation.py "
         "--tpm {input.tpm} --metadata {input.metadata} "
         "--hub-genes {input.hub} --modules {input.modules} "
         "--out-dir results/reports/"
@@ -592,7 +592,7 @@ rule m6_annotate:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/m6_gene_annotation.py "
+        "python pipeline/src/network/m6_gene_annotation.py "
         "--hub-genes {input.hub} --modules {input.modules} "
         "--out-dir results/reports/"
 
@@ -612,7 +612,7 @@ rule m6_proteins:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/fetch_prawn_proteins.py "
+        "python pipeline/src/network/fetch_prawn_proteins.py "
         "--counts {input} --out-dir data/interim/literature_tables"
 
 
@@ -655,7 +655,7 @@ rule m6_uniprot_sets:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/map_uniprot_sets.py --diamond {input} "
+        "python pipeline/src/network/map_uniprot_sets.py --diamond {input} "
         "--out-dir data/interim/literature_tables"
 
 
@@ -687,7 +687,7 @@ rule m6_gsea:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "Rscript src/network/m6_gsea.R"
+        "Rscript pipeline/src/network/m6_gsea.R"
 
 
 # ================================================================
@@ -717,7 +717,7 @@ rule build_network_edges:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/network/build_edges.py --taxa {input.taxa} --genes {input.genes} "
+        "python pipeline/src/network/build_edges.py --taxa {input.taxa} --genes {input.genes} "
         "--out {output} --exclude-contaminants"
 
 
@@ -729,8 +729,9 @@ rule generate_shortlists:
     """Final ranked submission tables (the ones in docs/FINAL_REPORT.md).
 
     src/ranking/generate_final_shortlists.py takes NO CLI arguments — it
-    derives BASE from its own file location (Path(__file__).resolve().parents[2])
-    and reads/writes paths relative to the repo root. The input/output lists
+    derives BASE from its own file location (Path(__file__).resolve().parents[3],
+    now that src/ lives under pipeline/) and reads/writes paths relative to the
+    repo root. The input/output lists
     below mirror those paths so the DAG is correct; they are not passed to the
     script.
 
@@ -739,7 +740,7 @@ rule generate_shortlists:
     therefore listed as an input here, not an output — listing it as both
     would be a cycle.
 
-    (src/ranking/fill_shortlists.py is the older, argument-driven generator.
+    (pipeline/src/ranking/fill_shortlists.py is the older, argument-driven generator.
     It did not produce the shipped tables, it has no --template option despite
     its docstring, and docs/track3_shortlists_TEMPLATE.xlsx does not exist.)"""
     input:
@@ -763,7 +764,7 @@ rule generate_shortlists:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/ranking/generate_final_shortlists.py"
+        "python pipeline/src/ranking/generate_final_shortlists.py"
 
 
 rule generate_figures:
@@ -797,4 +798,4 @@ rule generate_figures:
     conda:
         "../environment/conda_environment.yml"
     shell:
-        "python src/ranking/generate_cnsplots.py"
+        "python pipeline/src/ranking/generate_cnsplots.py"

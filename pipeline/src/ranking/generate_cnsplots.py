@@ -25,7 +25,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import cnsplots as cns
 
-BASE = Path(__file__).resolve().parents[2]
+BASE = Path(__file__).resolve().parents[3]
 OUT_DIR = BASE / 'results' / 'figures' / 'cnsplots'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

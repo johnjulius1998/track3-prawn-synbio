@@ -182,7 +182,7 @@ def main():
               "'set -a; source ~/biocyc.env; set +a'", file=sys.stderr)
         return 1
 
-    base = Path(__file__).resolve().parents[2]
+    base = Path(__file__).resolve().parents[3]
     ec_path = Path(args.ec)
     out_dir = Path(args.out_dir)
     if not ec_path.is_absolute():

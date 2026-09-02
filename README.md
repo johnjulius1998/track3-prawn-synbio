@@ -128,7 +128,7 @@ Thirteen layers of internal validation were applied to avoid overinterpreting ou
 
 ## Final Ranked Candidates
 
-**These are the final ranked candidates** — see `results/shortlist/track3_shortlists.xlsx` (or the matching CSVs) for the fully annotated version, with supporting columns such as `statistic_attributable_to`, `n_libraries_behind_this_call`, `edge_basis`, and `contaminant_risk` for every candidate. Both lists are capped below their maximum size (10 genes, 5 taxa) because the validation gates stop passing candidates before that ceiling is reached — fewer, better-supported candidates were prioritized over hitting the maximum count.
+**These are the final ranked candidates** — see `results/track3_shortlists.xlsx` (or the matching CSVs under `results/shortlist/`) for the fully annotated version, with supporting columns such as `statistic_attributable_to`, `n_libraries_behind_this_call`, `edge_basis`, and `contaminant_risk` for every candidate. Both lists are capped below their maximum size (10 genes, 5 taxa) because the validation gates stop passing candidates before that ceiling is reached — fewer, better-supported candidates were prioritized over hitting the maximum count.
 
 ### Host Genes (6 of 10 ceiling — gated by permutation-null testing, not by data availability)
 
@@ -152,7 +152,7 @@ Only modules M6 (empirical p=0.001) and M8 (p=0.014) exceed the permutation null
 
 ### Microbial Taxa (5 of 5 ceiling — all 5 independently pass every gate)
 
-Ranked by Bayesian posterior |log2FC| among taxa whose 95% credible interval excludes zero AND contamination risk is LOW (`src/asv/01c_bayesian_taxon_model.py`, `results/reports/bayesian_taxon_enrichment.tsv`):
+Ranked by Bayesian posterior |log2FC| among taxa whose 95% credible interval excludes zero AND contamination risk is LOW (`pipeline/src/asv/01c_bayesian_taxon_model.py`, `results/reports/bayesian_taxon_enrichment.tsv`):
 
 | Rank | Taxon | Direction | Bayesian log2FC [95% CI] | Why |
 |------|-------|-----------|---------------------------|-----|
@@ -203,36 +203,39 @@ The internal validation tells us **exactly which findings to prioritize** for ex
 
 ```
 .
-├── workflow/
-│   ├── Snakefile              # Full analysis DAG (microbial, host, WGCNA, validation, integration, shortlisting)
-│   └── profiles/local/        # Snakemake execution profile
-├── config/
-│   ├── project_config.yaml    # Pipeline parameters, dataset/edge-type rules
-│   └── contaminant_genera.txt # Known-contaminant genus list used by the ASV filtering step
-├── environment/
-│   └── conda_environment.yml  # Conda env spec (name: track3_prawn)
-├── environment.yml             # top-level copy, for one-command setup
 ├── report/
-│   ├── report.pdf              # the 10-page submission report (rendered 8 pages)
-│   └── report_submission.md    # its Markdown source
-├── docs/
-│   ├── WETLAB_VALIDATION_PLAN.md  # executable validation plan (GK Aqua R&D)
-│   └── VALIDATION_ANALYSIS.md     # the 13-layer validation stack, in full
-├── src/
-│   ├── asv/                   # CLR transform, taxon sensitivity, functional profiling, MetaCyc mapping
-│   ├── network/                # WGCNA, confound correction, bootstrap/permutation/causal validation, edge building
-│   ├── rnaseq/                 # SRA metadata/download, salmon quantification, DESeq2 validation
-│   ├── ranking/                # Final shortlist generation and submission figure generation
-│   └── utils/                  # Monitoring/preflight helper scripts
+│   └── report.pdf               # the 10-page submission report (rendered 8 pages)
+├── pipeline/                    # everything needed to re-run the analysis
+│   ├── Snakefile                # Full analysis DAG (microbial, host, WGCNA, validation, integration, shortlisting)
+│   ├── profiles/local/          # Snakemake execution profile
+│   ├── src/                     # all analysis scripts
+│   │   ├── asv/                 # CLR transform, taxon sensitivity, functional profiling, MetaCyc mapping
+│   │   ├── network/             # WGCNA, confound correction, bootstrap/permutation/causal validation, edge building
+│   │   ├── rnaseq/              # SRA metadata/download, salmon quantification, DESeq2 validation
+│   │   ├── ranking/             # Final shortlist generation and submission figure generation
+│   │   └── utils/               # Monitoring/preflight helper scripts
+│   └── config/                  # project_config.yaml (parameters) + contaminant_genera.txt
+├── figures/
+│   └── final_integrated_network.{png,svg,pdf}   # the submission network figure (publication resolution)
+├── results/
+│   ├── track3_shortlists.xlsx   # filled shortlist template
+│   ├── shortlist/               # official ranked shortlists as CSVs (host genes, taxa, pathways, edges, weights)
+│   ├── figures/                 # supporting figures (GSEA dotplots, cnsplots fig1-8)
+│   ├── tables/                  # WGCNA module tables
+│   └── reports/                 # validation/statistics reports (permutation null, power analysis, etc.)
+├── video/
+│   └── pitch.mp4                # 3-minute elevator pitch
 ├── data/
-│   ├── raw/supplied/          # The original supplied ASV table (small, included)
-│   ├── raw/sra/PRJNA875278/    # Sample metadata/run info only — NOT the raw reads (see Data Availability)
-│   └── processed/              # Final CLR profiles, gene expression matrices, WGCNA outputs
-└── results/
-    ├── figures/                 # Submission figures (cnsplots fig1-8, final integrated network, GSEA dotplots)
-    ├── tables/                  # WGCNA module tables
-    ├── reports/                 # Validation/statistics reports (permutation null, power analysis, etc.)
-    └── shortlist/                # Official ranked shortlists (host genes, microbial taxa, pathways, network edges)
+│   ├── raw/supplied/            # The original supplied ASV table (small, included)
+│   ├── raw/sra/PRJNA875278/     # Sample metadata/run info only — NOT the raw reads (see Data Availability)
+│   └── processed/               # Final CLR profiles, gene expression matrices, WGCNA outputs
+├── environment/
+│   └── conda_environment.yml    # Conda env spec (name: track3_prawn)
+├── environment.yml              # top-level copy, for one-command setup
+├── docs/
+│   ├── WETLAB_VALIDATION_PLAN.md    # executable validation plan (GK Aqua R&D)
+│   └── VALIDATION_ANALYSIS.md       # the 13-layer validation stack, in full
+└── README.md
 ```
 
 See [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md) for what raw/intermediate data is excluded from this repository and how to regenerate it.
@@ -244,12 +247,12 @@ See [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md) for what raw/intermediate data 
 ```bash
 conda env create -f environment.yml   # identical to environment/conda_environment.yml
 conda activate track3_prawn
-snakemake --profile workflow/profiles/local
+snakemake -s pipeline/Snakefile --profile pipeline/profiles/local
 ```
 
-All analysis code is in `src/`.
+All analysis code is in `pipeline/src/`.
 
-**Note on exact reproducibility**: the shipped results in `results/` and `data/processed/` were originally produced by running `src/rnaseq/process_all_samples.sh` as a serial driver over the raw SRA downloads (per the note in `workflow/Snakefile`), not by a single end-to-end `snakemake` invocation — the raw FASTQ files were deleted after processing to save space and are not bundled in this repository. A fresh clone can:
+**Note on exact reproducibility**: the shipped results in `results/` and `data/processed/` were originally produced by running `pipeline/src/rnaseq/process_all_samples.sh` as a serial driver over the raw SRA downloads (per the note in `pipeline/Snakefile`), not by a single end-to-end `snakemake` invocation — the raw FASTQ files were deleted after processing to save space and are not bundled in this repository. A fresh clone can:
 - Re-run every step downstream of `data/processed/` and `data/raw/supplied/` (the ASV/WGCNA/validation/shortlisting layers) immediately.
 - Re-run the RNA-seq layer from scratch only after re-fetching raw reads from BioProject **PRJNA875278** (see [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md)); `snakemake -n` (dry run) will correctly report these inputs as missing until then.
 
@@ -263,7 +266,7 @@ All analysis code is in `src/`.
 
 ## Development Workflow
 
-For any future changes to this repository: work on a feature branch and open a pull request into `main`, even when working solo — the PR diff and description double as a reviewable changelog. Keep `main` always in a working, citable state. Write commit messages that explain *why* a change was made, not just what changed. Never edit files under `data/raw/` by hand — all raw→processed transformations should happen through the scripts in `src/` and the Snakemake rules in `workflow/Snakefile`, so the data lineage stays reproducible.
+For any future changes to this repository: work on a feature branch and open a pull request into `main`, even when working solo — the PR diff and description double as a reviewable changelog. Keep `main` always in a working, citable state. Write commit messages that explain *why* a change was made, not just what changed. Never edit files under `data/raw/` by hand — all raw→processed transformations should happen through the scripts in `pipeline/src/` and the Snakemake rules in `pipeline/Snakefile`, so the data lineage stays reproducible.
 
 ---
 

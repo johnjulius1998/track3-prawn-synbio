@@ -113,7 +113,7 @@ def main():
                     default="data/interim/literature_tables/api_cache")
     args = ap.parse_args()
 
-    base = Path(__file__).resolve().parents[2]
+    base = Path(__file__).resolve().parents[3]
     diamond_path = Path(args.diamond)
     out_dir = Path(args.out_dir)
     if not diamond_path.is_absolute():

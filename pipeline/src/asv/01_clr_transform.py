@@ -15,14 +15,14 @@ CRITICAL RULES (enforced):
   - NO p-values, NO FDR, NO statistical tests (n=1 prohibits inference)
   - Direction is descriptive ONLY: "Jumper-enriched" / "Laggard-enriched"
   - Fold-difference is computed as CLR difference, not raw ratio
-  - Contaminant screening uses config/contaminant_genera.txt
+  - Contaminant screening uses pipeline/config/contaminant_genera.txt
   - All data originates ONLY from the supplied ASV table
 
 USAGE:  python src/asv/01_clr_transform.py \
             --in data/raw/supplied/ASV_table_Jumpers_Laggards.GKAQUA.csv \
             --out data/processed/clr_profiles/taxa_direction.tsv \
             --min-reads 100 \
-            --contaminants config/contaminant_genera.txt
+            --contaminants pipeline/config/contaminant_genera.txt
 """
 
 import argparse
@@ -232,7 +232,7 @@ def main():
     parser.add_argument("--out", dest="output_file", required=True, help="Output TSV file")
     parser.add_argument("--min-reads", type=int, default=100,
                         help="Minimum total reads to retain a taxon (default: 100)")
-    parser.add_argument("--contaminants", default="config/contaminant_genera.txt",
+    parser.add_argument("--contaminants", default="pipeline/config/contaminant_genera.txt",
                         help="Path to contaminant genera list")
     args = parser.parse_args()
 

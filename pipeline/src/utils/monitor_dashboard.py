@@ -16,7 +16,7 @@ import time
 from pathlib import Path
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 def get_pipeline_status():

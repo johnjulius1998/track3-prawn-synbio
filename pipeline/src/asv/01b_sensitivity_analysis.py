@@ -30,7 +30,7 @@ USAGE:
   python src/asv/01b_sensitivity_analysis.py \
       --in data/raw/supplied/ASV_table_Jumpers_Laggards.GKAQUA.csv \
       --out-dir results/reports/ \
-      --contaminants config/contaminant_genera.txt \
+      --contaminants pipeline/config/contaminant_genera.txt \
       --n-pseudocounts 10
 """
 
